@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-HTProject_Swift/Pods-HTProject_Swift-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework
+${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework

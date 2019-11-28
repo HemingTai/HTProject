@@ -1,0 +1,47 @@
+/*------------ git 相关命令 ------------*/
+
+新增修改：git add .
+提交修改：git commit -m"更新信息"
+拉取远程代码：git pull(origin 分支名)
+提交代码到远程：git push(origin 分支名)
+
+查看本地分支：git branch
+查看本地及远程分支：git branch -a
+创建分支：git branch 分支名
+切换分支：git checkout 分支名
+fetch分支：git fetch
+删除分支：git branch -d 分支名
+删除远程分支：git push origin --delete 分支名
+合并分支：git merge 分支名
+
+查看tag：git tag
+创建tag：git tag tag名
+删除tag：git tag -d tag名
+删除远程tag：git push origin :refs/tags/tag名
+推tag到仓库：git push origin tag名
+
+/*------------ fastlane 相关命令 ------------*/
+
+fastlane打包：fastlane action名称（如：fastlane development_build）
+
+/*------------ pod 相关命令 ------------*/
+设置pod：pod setup
+初始化pod：pod init
+安装pod：pod install（会更新远程pod仓库，速度可能会比较慢）
+安装pod：pod install --verbose --no-repo-update（不会更新远程pod仓库，速度比较快）
+更新pod：pod update（会更新远程pod仓库，速度可能会比较慢）
+更新pod：pod update --verbose --no-repo-update（不会更新远程pod仓库，速度比较快）
+
+创建私有仓库spec文件：pod spec create 仓库名
+验证本地spec文件是否正确：pod lib lint （pod lib lint --allow-warnings 验证并忽略警告）
+验证远程spec文件是否正确：pod spec lint HTSpecs.podspec --allow-warnings --use-libraries
+导入本地pod仓库：pod 'Example', :path => '本地pod仓库的地址（如：~/Documents/ModuleProject/ModuleA）'
+推送本地仓库到远程：pod repo push 远程仓库名 私有仓库spec文件名（如：pod repo push HTSpecs HTSpecs.podspec）
+pod导入远程私有仓库，需要在Podfile中指定source（如：source "https://github.com/HemingTai/HTSpecs.git"）
+pod导入三方和私有仓库，需要在Podfile中指定私有source和三方source：
+如：source "https://github.com/HemingTai/HTSpecs.git"，source "https://github.com/CocoaPods/Specs.git"
+
+将远程仓库发布到cocoaPods:
+1、可使用 pod trunk me 来验证本地账户
+2、可使用 pod trunk info 仓库名 来获取该仓库相关信息
+3、发布 pod trunk push
