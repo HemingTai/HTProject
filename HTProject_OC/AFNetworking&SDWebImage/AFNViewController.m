@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) UIImageView *imgView;
 @property (nonatomic, strong) UIImageView *imgView2;
+@property (nonatomic, strong) YYAnimatedImageView *imgView3;
 
 @end
 
@@ -55,10 +56,12 @@
                                                            }];
     [av setAnimatingWithStateOfTask:task];
     
-    self.imgView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 20, 200, 300)];
+    self.imgView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 20, 100, 150)];
     [self.view addSubview:self.imgView];
-    self.imgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(100, 340, 200, 300)];
+    self.imgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(100, 170, 100, 150)];
     [self.view addSubview:self.imgView2];
+    self.imgView3 = [[YYAnimatedImageView alloc] initWithFrame:CGRectMake(100, 320, 100, 150)];
+    [self.view addSubview:self.imgView3];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -142,14 +145,31 @@
     [self.imgView2 sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574920132472&di=f2d644b6a0ec3b52b0685441c783cdc5&imgtype=0&src=http%3A%2F%2Fww2.sinaimg.cn%2Flarge%2F85cc5ccbgy1fi7fxvxk81g20lv0jrjsp.jpg"]
                     placeholderImage:nil];
     
-    /******************************** AFNetworking&SDWebImage加载图片框架对比 ********************************
-     * 1、AFN不支持Gif图片，SDWebImage支持加载Gif图片
-     * 2、AFN设置了默认的内存缓存和磁盘缓存大小以及有效期为7天，SDWebImage没有设置内存缓存和磁盘缓存大小，默认都为0，也没有设置过期时间
-     * 3、AFN对于磁盘缓存只提供了清除所有以及某张图片的方法，SDWebImage提供了很多关于磁盘清理缓存的方法
-     * 4、AFN不支持图片的编解码操作，但是SDWebImage支持图片的编解码
+    /******************************** YYImage加载图片源码解析 ********************************
+     * YYImage提供了加载图片的一系列方法，但是最终内部都会调用setImageWithURL:placeholder:options:manager:progress:transform:completion:这个方法，源码解析如下：
+     * 1> 如果没有传入mananger，则创建一个默认的manager，该manager内部创建了YYImageCache对象(初始化缓存时设置了过期时间是12小时，内存缓存大小默认是无限制的，且内存缓存过期时间也是无限制的，磁盘缓存设置了单个文件存储方式，依据单个文件大小超过20KB则以文件形式存储，否则存入sqlite，缓存大小是无限制的，过期时间也是无限制的)，设置超时时间为15s，设置请求头Accept
+     * 2> 如果当前url对应的下载任务已存在，则先取消(YYImage也使用了信号量锁，NSOperationQueue,此外还使用了原子操作)
+     * 3> 设置占位图，然后尝试先从内存缓存中读取图片，如果取到缓存则回调
+     * 4> 没取到缓存则开始下载，下载完成后设置image再回调
+     * 5> YYImage支持Gif图，但是得使用YYAnimatedImageView这个类
+     */
+    
+    //YYImage下的加载图片框架
+    [self.imgView3 setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574920132472&di=f2d644b6a0ec3b52b0685441c783cdc5&imgtype=0&src=http%3A%2F%2Fww2.sinaimg.cn%2Flarge%2F85cc5ccbgy1fi7fxvxk81g20lv0jrjsp.jpg"]
+                       placeholder:nil
+                           options:0
+                           manager:nil
+                          progress:nil
+                         transform:nil
+                        completion:nil];
+    
+    /******************************** AFNetworking&SDWebImage&YYImage加载图片框架对比 ********************************
+     * 1、AFN不支持Gif图片，SDWebImage、YYImage支持加载Gif图片(YYImage需要使用YYAnimatedImageView这个类才能显示gif)
+     * 2、AFN设置了默认的内存缓存和磁盘缓存大小以及有效期为7天，SDWebImage没有设置内存缓存和磁盘缓存大小，默认都为0，
+     *    也没有设置过期时间，YYImage设置了内存缓存时间12小时，没有设置内存缓存和磁盘缓存大小
+     * 3、AFN对于磁盘缓存只提供了清除所有以及某张图片的方法，SDWebImage、YYImage提供了很多关于磁盘清理缓存的方法
+     * 4、AFN不支持图片的编解码操作，但是SDWebImage和YYImage支持图片的编解码
      ******************************** ********************************/
-    
-    
 }
 
 @end

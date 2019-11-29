@@ -31,10 +31,14 @@
     self.imgView.image = [self.view1.layer snapshotImage];
     [self.view addSubview:self.imgView];
     
+    NSArray *array = [NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6", nil];
+    NSLog(@"--%@",array.randomObject);
+    NSLog(@"--%@--%@",array.jsonStringEncoded, array.jsonPrettyStringEncoded);
+    NSMutableArray *mArray = [NSMutableArray arrayWithArray:array];
+    [mArray shuffle];
+    NSLog(@"--%@",mArray);
     
-    
-    
-    
+    NSLog(@"--%@", [UIApplication sharedApplication].appVersion);
 }
 
 @end
