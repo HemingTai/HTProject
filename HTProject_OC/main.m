@@ -31,7 +31,36 @@
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
     @autoreleasepool {
-        // Setup code that might create autoreleased objects goes here.
+        /*********************************** autoreleasepool实现原理 *********************************
+         * main()函数编译成C++代码后如下：
+         * extern "C" __declspec(dllimport) void * objc_autoreleasePoolPush(void);
+         * extern "C" __declspec(dllimport) void objc_autoreleasePoolPop(void *);
+         * struct __AtAutoreleasePool {
+         *   __AtAutoreleasePool() {atautoreleasepoolobj = objc_autoreleasePoolPush();}
+         *   ~__AtAutoreleasePool() {objc_autoreleasePoolPop(atautoreleasepoolobj);}
+         *   void * atautoreleasepoolobj;
+         * };
+         *
+         * int main(int argc, char * argv[]) {
+         *  { __AtAutoreleasePool __autoreleasepool;
+         *        return UIApplicationMain(argc, argv, __null, NSStringFromClass(((Class (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("AppDelegate"), sel_registerName("class"))));
+         *  }
+         * }
+         * 可以看到自动释放池在初始化时会调用objc_autoreleasePoolPush()，析构时会调用objc_autoreleasePoolPop()
+         * 在runtime源码中，可以看到自动释放池的实现细节如下：
+         * class AutoreleasePoolPage {
+             magic_t const magic; //用于对当前 AutoreleasePoolPage 完整性的校验
+             id *next;
+             pthread_t const thread; //保存了当前页所在的线程
+             AutoreleasePoolPage * const parent;//前节点
+             AutoreleasePoolPage *child;//后节点
+             uint32_t const depth;
+             uint32_t hiwat;
+         * };
+         * 每一个自动释放池都是由一系列的 AutoreleasePoolPage 组成的，并且每一个 AutoreleasePoolPage 的大小都是 4096 字节，AutoreleasePoolPage 是以双向链表的形式连接起来的：parent 和 child 就是用来构造双向链表的指针。
+         * 在每个自动释放池初始化调用 objc_autoreleasePoolPush 的时候，都会把一个 POOL_SENTINEL(哨兵对象) push 到自动释放池的栈顶，并且返回这个 POOL_SENTINEL 哨兵对象；而当方法 objc_autoreleasePoolPop 调用时，就会向自动释放池中的对象发送 release 消息，直到第一个 POOL_SENTINEL，所以AutoreleasePool可以嵌套，pop的时候总会释放到上次push的位置为止，
+         * 多层的pool就是多个哨兵对象多次push而已，就像剥洋葱一样，每次一层，互不影响
+         */
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);

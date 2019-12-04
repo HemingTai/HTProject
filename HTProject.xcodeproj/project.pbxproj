@@ -68,7 +68,6 @@
 		9EF5BA8C238BC04600145DB8 /* BolckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA46238BC04500145DB8 /* BolckViewController.m */; };
 		9EF5BA8D238BC04600145DB8 /* KLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA4A238BC04500145DB8 /* KLineView.m */; };
 		9EF5BA8E238BC04600145DB8 /* HTWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA4C238BC04500145DB8 /* HTWKWebViewController.m */; };
-		9EF5BA8F238BC04600145DB8 /* GJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA4D238BC04500145DB8 /* GJRefreshGifHeader.m */; };
 		9EF5BA90238BC04600145DB8 /* CompilerCommands.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA51238BC04500145DB8 /* CompilerCommands.m */; };
 		9EF5BA91238BC04600145DB8 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA54238BC04600145DB8 /* PageViewController.m */; };
 		9EF5BA92238BC04600145DB8 /* SocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA57238BC04600145DB8 /* SocketViewController.m */; };
@@ -243,9 +242,7 @@
 		9EF5BA49238BC04500145DB8 /* KLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLineView.h; sourceTree = "<group>"; };
 		9EF5BA4A238BC04500145DB8 /* KLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLineView.m; sourceTree = "<group>"; };
 		9EF5BA4C238BC04500145DB8 /* HTWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTWKWebViewController.m; sourceTree = "<group>"; };
-		9EF5BA4D238BC04500145DB8 /* GJRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJRefreshGifHeader.m; sourceTree = "<group>"; };
 		9EF5BA4E238BC04500145DB8 /* HTWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTWKWebViewController.h; sourceTree = "<group>"; };
-		9EF5BA4F238BC04500145DB8 /* GJRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJRefreshGifHeader.h; sourceTree = "<group>"; };
 		9EF5BA51238BC04500145DB8 /* CompilerCommands.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompilerCommands.m; sourceTree = "<group>"; };
 		9EF5BA52238BC04500145DB8 /* CompilerCommands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilerCommands.h; sourceTree = "<group>"; };
 		9EF5BA54238BC04600145DB8 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
@@ -691,8 +688,6 @@
 		9EF5BA4B238BC04500145DB8 /* WKWebView */ = {
 			isa = PBXGroup;
 			children = (
-				9EF5BA4F238BC04500145DB8 /* GJRefreshGifHeader.h */,
-				9EF5BA4D238BC04500145DB8 /* GJRefreshGifHeader.m */,
 				9EF5BA4E238BC04500145DB8 /* HTWKWebViewController.h */,
 				9EF5BA4C238BC04500145DB8 /* HTWKWebViewController.m */,
 			);
@@ -1178,7 +1173,6 @@
 				9EF5BA92238BC04600145DB8 /* SocketViewController.m in Sources */,
 				9EF5B9AB238BBEDC00145DB8 /* main.m in Sources */,
 				9EF5BA80238BC04600145DB8 /* RuntimeViewController+Swizzling.m in Sources */,
-				9EF5BA8F238BC04600145DB8 /* GJRefreshGifHeader.m in Sources */,
 				9EF5BAEB238BD2AA00145DB8 /* NSString+Extension.m in Sources */,
 				9EF5BA78238BC04600145DB8 /* MemoryViewController.m in Sources */,
 				9EF5BB16238D126E00145DB8 /* ThirdDemoController.m in Sources */,
