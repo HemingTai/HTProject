@@ -17,6 +17,15 @@
 
 @implementation AppDelegate
 
+/************************ App的生命周期 ************************
+* App的生命周期分别调用哪些方法（iOS 13以后）：
+* App从启动开始到进入首页分别会调用以下方法：didFinishLaunchingWithOptions -> configurationForConnectingSceneSession ->
+  willConnectToSession -> sceneWillEnterForeground -> viewDidLoad -> viewWillAppear -> sceneDidBecomeActive -> viewDidAppear
+* 从前台进入后台分别会调用以下方法：sceneWillResignActive -> sceneDidEnterBackground
+* 从后台进入前台分别会调用以下方法：sceneWillEnterForeground -> sceneDidBecomeActive
+* 从前台进入多任务状态会调用以下方法：sceneWillResignActive
+* 从多任务状态杀死App分别会调用以下方法：sceneDidDisconnect -> didDiscardSceneSessions -> viewWillDisappear -> viewDidDisappear
+*************************************************************/
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //为了方便调试过程中及时发现问题，建议只在线上版本使用这个功能，在测试阶段不要开启，以便及时发现并处理问题。
@@ -67,6 +76,7 @@
 //    NSLog(@"%@", model);
     
     [IQKeyboardManager sharedManager].enable = YES;
+    NSLog(@"--didFinishLaunchingWithOptions");
     return YES;
 }
 
@@ -74,17 +84,19 @@
 #pragma mark - UISceneSession lifecycle
 
 
-- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
+- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options  API_AVAILABLE(ios(13.0)){
     // Called when a new scene session is being created.
     // Use this method to select a configuration to create the new scene with.
+    NSLog(@"--configurationForConnectingSceneSession");
     return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
 }
 
 
-- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
+- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions  API_AVAILABLE(ios(13.0)){
     // Called when the user discards a scene session.
     // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    NSLog(@"--didDiscardSceneSessions");
 }
 
 

@@ -92,13 +92,14 @@ static People *people;
 //    [self excuteTaskByAfter];
 //    [self excuteTaskByOnce];
 //    [self excuteTaskByApply];
-    [self excuteTaskByGroup];
+//    [self excuteTaskByGroup];
 //    [self excuteTaskBySemaphore];
 //    [self excuteTicketTaskBySemaphore];
 //    [self excuteTaskByTimer];
 //    [self excuteTaskByNSThread];
 //    [self excuteTaskByNSOperation];
 //    [self excuteTask];
+    [self excuteConcurrentTask];
 }
 
 //! 定时器
@@ -527,12 +528,10 @@ static People *people;
     [queue addOperation:bop3];
 }
 
-- (void)excuteTask
-{
+- (void)excuteTask {
     //经典面试题：问输出结果是什么
     __block int a = 0;
-    while (a<5)
-    {
+    while (a<5) {
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             NSLog(@"--%d",a);
             a++;
@@ -544,6 +543,25 @@ static People *people;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSLog(@"a === %d", a);//输出a的最大值
     });
+}
+
+//GCD通过信号量可以控制最大并发数
+- (void)excuteConcurrentTask {
+    dispatch_queue_t workConcurrentQueue = dispatch_queue_create("cccccccc", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t serialQueue = dispatch_queue_create("sssssssss",DISPATCH_QUEUE_SERIAL);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(3);
+
+    for (NSInteger i = 0; i < 10; i++) {
+      dispatch_async(serialQueue, ^{
+          dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+          dispatch_async(workConcurrentQueue, ^{
+              NSLog(@"thread-info:%@开始执行任务%d",[NSThread currentThread],(int)i);
+              sleep(1);
+              NSLog(@"thread-info:%@结束执行任务%d",[NSThread currentThread],(int)i);
+              dispatch_semaphore_signal(semaphore);});
+      });
+    }
+    NSLog(@"主线程...!");
 }
 
 @end

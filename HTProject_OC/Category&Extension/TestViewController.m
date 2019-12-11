@@ -35,8 +35,7 @@
  ④类扩展不能像类别那样拥有独立的实现部分（@implementation部分），也就是说，类扩展所声明的方法必须依托对应类的实现部分来实现。
  ⑤定义在 .m 文件中的类扩展方法为私有的，定义在 .h 文件（头文件）中的类扩展方法为公有的。类扩展是在 .m 文件中声明私有方法的非常好的方式。
  ***********************************************************************************************************************/
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     [self myTestFunction1];
@@ -46,8 +45,7 @@
     NSLog(@"age:%@",self.age);//*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[TestViewController setAge:]: unrecognized selector sent to instance 0x10090e5a0'
 }
 
-- (void)myTestFunction1
-{
+- (void)myTestFunction1 {
     NSLog(@"111111");
     self.name = @"heming";
 }

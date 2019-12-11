@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3F0E9C15690A8DA8B0955E0E /* Pods_HTProject_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6681FA9E8811026205E016CD /* Pods_HTProject_Swift.framework */; };
 		94F4F3E118AFFBB59F699D14 /* Pods_HTProject_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCCD82F8D46E95EC2288FA6E /* Pods_HTProject_OC.framework */; };
+		9E20DF63239F425A00FC9168 /* HTCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E20DF62239F425A00FC9168 /* HTCollectionViewFlowLayout.m */; };
+		9E4C90D9239DFDB8005573C3 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C90D8239DFDB8005573C3 /* CollectionViewController.m */; };
+		9EAB39EF2398F89500FE9665 /* LifeCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB39EE2398F89500FE9665 /* LifeCycleViewController.m */; };
 		9EF5B967238BBE1600145DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5B966238BBE1600145DB8 /* main.m */; };
 		9EF5B99A238BBEDC00145DB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5B999238BBEDC00145DB8 /* AppDelegate.m */; };
 		9EF5B99D238BBEDC00145DB8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5B99C238BBEDC00145DB8 /* SceneDelegate.m */; };
@@ -135,6 +138,12 @@
 		24F36481BE34E11183DDECC1 /* Pods-HTProject_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTProject_OC.release.xcconfig"; path = "Target Support Files/Pods-HTProject_OC/Pods-HTProject_OC.release.xcconfig"; sourceTree = "<group>"; };
 		6681FA9E8811026205E016CD /* Pods_HTProject_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTProject_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6B769A937A61E02EB34CB9 /* Pods-HTProject_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTProject_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HTProject_Swift/Pods-HTProject_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		9E20DF61239F425A00FC9168 /* HTCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		9E20DF62239F425A00FC9168 /* HTCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		9E4C90D7239DFDB8005573C3 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		9E4C90D8239DFDB8005573C3 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		9EAB39ED2398F89500FE9665 /* LifeCycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LifeCycleViewController.h; sourceTree = "<group>"; };
+		9EAB39EE2398F89500FE9665 /* LifeCycleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeCycleViewController.m; sourceTree = "<group>"; };
 		9EF5B963238BBE1600145DB8 /* HTProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HTProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF5B966238BBE1600145DB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EF5B996238BBEDC00145DB8 /* HTProject_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTProject_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -362,6 +371,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E4C90D6239DFD8C005573C3 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				9E4C90D7239DFDB8005573C3 /* CollectionViewController.h */,
+				9E4C90D8239DFDB8005573C3 /* CollectionViewController.m */,
+				9E20DF61239F425A00FC9168 /* HTCollectionViewFlowLayout.h */,
+				9E20DF62239F425A00FC9168 /* HTCollectionViewFlowLayout.m */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		9EAB39EC2398F84700FE9665 /* LifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				9EAB39ED2398F89500FE9665 /* LifeCycleViewController.h */,
+				9EAB39EE2398F89500FE9665 /* LifeCycleViewController.m */,
+			);
+			path = LifeCycle;
+			sourceTree = "<group>";
+		};
 		9EF5B95A238BBE1600145DB8 = {
 			isa = PBXGroup;
 			children = (
@@ -403,11 +432,13 @@
 				9EF5BA45238BC04500145DB8 /* Block */,
 				9EF5B9FD238BC04400145DB8 /* Category&Extension */,
 				9EF5B9E3238BC04400145DB8 /* ChainProgramming */,
+				9E4C90D6239DFD8C005573C3 /* CollectionView */,
 				9EF5BA50238BC04500145DB8 /* CompilerCommands */,
 				9EF5BA1A238BC04500145DB8 /* Dictionary */,
 				9EF5BACE238BD2AA00145DB8 /* Extensions */,
 				9EF5BA25238BC04500145DB8 /* Json2Model */,
 				9EF5BA48238BC04500145DB8 /* KLine */,
+				9EAB39EC2398F84700FE9665 /* LifeCycle */,
 				9EF5BA17238BC04500145DB8 /* Memory */,
 				9EF5BA14238BC04400145DB8 /* MultiThreads */,
 				9EF5B9F2238BC04400145DB8 /* NS_OPTIONS */,
@@ -1159,6 +1190,7 @@
 				9EF5BA8E238BC04600145DB8 /* HTWKWebViewController.m in Sources */,
 				9EF5BA71238BC04600145DB8 /* MVVMViewController.m in Sources */,
 				9EF5BA7B238BC04600145DB8 /* HTNetworking.m in Sources */,
+				9E4C90D9239DFDB8005573C3 /* CollectionViewController.m in Sources */,
 				9EF5BAEA238BD2AA00145DB8 /* UIColor+Extension.m in Sources */,
 				9EF5BB14238D126E00145DB8 /* FirstDemoController.m in Sources */,
 				9EF5BAE5238BD2AA00145DB8 /* NSData+Extension.m in Sources */,
@@ -1169,6 +1201,7 @@
 				9EF5BB18238D126E00145DB8 /* WaveView.m in Sources */,
 				9EF5BA84238BC04600145DB8 /* HTCrashReporter.m in Sources */,
 				9EF5B99A238BBEDC00145DB8 /* AppDelegate.m in Sources */,
+				9E20DF63239F425A00FC9168 /* HTCollectionViewFlowLayout.m in Sources */,
 				9EF5BA6C238BC04600145DB8 /* RSATestViewController.m in Sources */,
 				9EF5BA92238BC04600145DB8 /* SocketViewController.m in Sources */,
 				9EF5B9AB238BBEDC00145DB8 /* main.m in Sources */,
@@ -1180,6 +1213,7 @@
 				9EF5BA73238BC04600145DB8 /* MVVMHeaderView.m in Sources */,
 				9EF5BA82238BC04600145DB8 /* HTCrashProxy.m in Sources */,
 				9EF5BA67238BC04600145DB8 /* TimerViewController.m in Sources */,
+				9EAB39EF2398F89500FE9665 /* LifeCycleViewController.m in Sources */,
 				9EF5BA60238BC04600145DB8 /* OCObjectViewController.m in Sources */,
 				9EF5BA93238BC04600145DB8 /* HTSocketManager.m in Sources */,
 				9EF5BA75238BC04600145DB8 /* MVVMTableViewCell.m in Sources */,
