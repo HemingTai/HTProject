@@ -11,6 +11,7 @@
 		94F4F3E118AFFBB59F699D14 /* Pods_HTProject_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCCD82F8D46E95EC2288FA6E /* Pods_HTProject_OC.framework */; };
 		9E20DF63239F425A00FC9168 /* HTCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E20DF62239F425A00FC9168 /* HTCollectionViewFlowLayout.m */; };
 		9E4C90D9239DFDB8005573C3 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C90D8239DFDB8005573C3 /* CollectionViewController.m */; };
+		9E8B482523A1EE3500F0B754 /* HTHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B482423A1EE3500F0B754 /* HTHeaderView.m */; };
 		9EAB39EF2398F89500FE9665 /* LifeCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB39EE2398F89500FE9665 /* LifeCycleViewController.m */; };
 		9EF5B967238BBE1600145DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5B966238BBE1600145DB8 /* main.m */; };
 		9EF5B99A238BBEDC00145DB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5B999238BBEDC00145DB8 /* AppDelegate.m */; };
@@ -142,6 +143,8 @@
 		9E20DF62239F425A00FC9168 /* HTCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		9E4C90D7239DFDB8005573C3 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		9E4C90D8239DFDB8005573C3 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		9E8B482323A1EE3500F0B754 /* HTHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTHeaderView.h; sourceTree = "<group>"; };
+		9E8B482423A1EE3500F0B754 /* HTHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTHeaderView.m; sourceTree = "<group>"; };
 		9EAB39ED2398F89500FE9665 /* LifeCycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LifeCycleViewController.h; sourceTree = "<group>"; };
 		9EAB39EE2398F89500FE9665 /* LifeCycleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeCycleViewController.m; sourceTree = "<group>"; };
 		9EF5B963238BBE1600145DB8 /* HTProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HTProject; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -387,6 +390,8 @@
 			children = (
 				9EAB39ED2398F89500FE9665 /* LifeCycleViewController.h */,
 				9EAB39EE2398F89500FE9665 /* LifeCycleViewController.m */,
+				9E8B482323A1EE3500F0B754 /* HTHeaderView.h */,
+				9E8B482423A1EE3500F0B754 /* HTHeaderView.m */,
 			);
 			path = LifeCycle;
 			sourceTree = "<group>";
@@ -1184,6 +1189,7 @@
 			files = (
 				9EF5BA6A238BC04600145DB8 /* HTRSA.m in Sources */,
 				9EF5BA77238BC04600145DB8 /* MultiThreadViewController.m in Sources */,
+				9E8B482523A1EE3500F0B754 /* HTHeaderView.m in Sources */,
 				9EF5BA83238BC04600145DB8 /* HTCrashConfiguration.m in Sources */,
 				9EF5BA87238BC04600145DB8 /* NSObject+Swizzling.m in Sources */,
 				9EF5BA7E238BC04600145DB8 /* HTTestModel.m in Sources */,

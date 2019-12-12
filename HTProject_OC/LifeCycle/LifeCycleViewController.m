@@ -7,8 +7,11 @@
 //
 
 #import "LifeCycleViewController.h"
+#import "HTHeaderView.h"
 
 @interface LifeCycleViewController ()
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -28,7 +31,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     
-     NSLog(@"--viewDidLoad");
+    NSLog(@"--viewDidLoad");
+    [self initializeSubviews];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -63,6 +67,21 @@
 
 - (void)dealloc {
     NSLog(@"--dealloc");
+}
+
+//MARK: ------ functions ------
+
+- (void)initializeSubviews {
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.tableView];
+    HTHeaderView *header = [[HTHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 30)];
+    self.tableView.tableHeaderView = header;//被添加至父视图中，延时调用
+    [header layoutIfNeeded];//立即调用
+    NSLog(@"------------分割线--------------");
+    [header layoutIfNeeded];
+    [header layoutIfNeeded];
+    [header layoutIfNeeded];
+    [self.view addSubview:header];//被添加至父视图中，延时调用
 }
 
 @end

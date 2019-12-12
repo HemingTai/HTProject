@@ -10,28 +10,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 瀑布流布局方式
 typedef NS_ENUM(NSInteger, HTAlignmentLayout) {
-    HTAlignmentLayoutLeft,
-    HTAlignmentLayoutVertical
+    HTAlignmentLayoutVertical, //垂直靠上布局
+    HTAlignmentLayoutLeft //水平靠左布局
 };
 
 @interface HTCollectionViewFlowLayout : UICollectionViewFlowLayout
 
-/**
- 垂直瀑布流布局方法
- 
- @param itemWidth item 的宽度
- @param itemHeightArray item 的高度数组
- */
-- (void)flowLayoutWithItemWidth:(CGFloat)itemWidth itemHeightArray:(NSArray<NSNumber *> *)itemHeightArray;
-
-/**
-水平瀑布流布局方法
-
-@param itemHeight item 的高度
-@param itemWidthArray item 的宽度数组
-*/
-- (void)flowLayoutWithItemHeight:(CGFloat)itemHeight itemWidthArray:(NSArray<NSNumber *> *)itemWidthArray;
+/// 瀑布流布局
+/// @param itemSize item的大小，
+/// @param deltaArray item的宽度或者高度数组
+/// @param alignment 布局方式
+- (void)flowLayoutWithItemSize:(CGSize)itemSize
+                    deltaArray:(NSArray<NSNumber *> *)deltaArray
+                         style:(HTAlignmentLayout)alignment;
 
 @end
 
