@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HTHeaderView : UIView
 
+- (void)addTitleLabel;
+
+- (void)updateTitleLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END
