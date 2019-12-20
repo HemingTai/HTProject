@@ -27,7 +27,7 @@
         <!--Home-->
         <scene sceneID="LXB-cI-tdm">
             <objects>
-                <viewController id="a5r-m2-a9V" customClass="CollectionViewController" sceneMemberID="viewController">
+                <viewController id="a5r-m2-a9V" customClass="ArrayViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cov-Yb-yOJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
