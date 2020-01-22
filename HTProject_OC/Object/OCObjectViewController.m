@@ -14,7 +14,7 @@
 
 
 
-@interface OCObjectViewController ()
+@interface OCObjectViewController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -41,6 +41,40 @@
     Person *p2 = [p init];
     //因为init方法直接返回对象，所以p1和p2地址相同
     NSLog(@"%p---%p", p1, p2);
+}
+
+- (void)myTestFunction {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.backgroundColor = UIColor.orangeColor;
+    btn.frame = CGRectMake(100, 100, 100, 40);
+    [btn setTitle:@"click" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(action1) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(action2) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+    [tap addTarget:self action:@selector(action3)];
+    tap.delegate = self;
+    [btn addGestureRecognizer:tap];
+}
+
+- (void)action1{
+    NSLog(@"action1");
+}
+
+- (void)action2{
+    NSLog(@"action2");
+}
+
+- (void)action3{
+    NSLog(@"action3");
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if ([touch.view isKindOfClass:UIButton.class] ) {
+        return NO;
+    }
+    return YES;
 }
 
 @end

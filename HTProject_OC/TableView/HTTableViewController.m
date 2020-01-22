@@ -7,6 +7,7 @@
 //
 
 #import "HTTableViewController.h"
+#import "HTTableViewCell.h"
 
 @interface HTTableViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
@@ -94,6 +95,9 @@
                 }
             }];
         }
+        //如果cell也是tableView，那么滚动cell中的tableView，并不会影响父tableView的滚动
+//        HTTableViewCell *tb = [[HTTableViewCell alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 300)];
+//        [cell.contentView addSubview:tb];
     }
     cell.textLabel.text = self.dataArray[indexPath.section][indexPath.row];
     return cell;
