@@ -41,7 +41,7 @@
 //        NSLog(@"---%@",obj);
 //    }];
     
-    //可变数组遍历时删除元素，如果是快速枚举for..in必定会崩溃，如果是迭代器则可能会崩溃
+    //可变数组遍历时删除元素，如果是快速枚举for..in必定会崩溃，如果是枚举器则可能会崩溃
     //所以如果必须要删除元素且不使用新的数组情况下，使用逆序遍历最安全
 //    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 //        NSLog(@"--%ld",idx);
@@ -56,7 +56,7 @@
 //    }];
 //
 //    for (NSNumber *num in array) {
-//        //直接删除会导致崩溃，原因是遍历的同时不能改变该数组，可以先copy一份再遍历，或者迭代器，或者逆向迭代
+//        //直接删除会导致崩溃，原因是遍历的同时不能改变该数组，可以先copy一份再遍历，或者枚举器，或者逆向迭代
 //        [array removeObject:num];
 //    }
 //

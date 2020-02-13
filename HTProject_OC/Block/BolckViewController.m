@@ -62,6 +62,8 @@ static int b = 2;
     __weak typeof(self) weakSelf = self;
     self.HTBlock = ^{
         //1、为了解决提前释放问题，需在block里面再转换为强引用
+        //延伸：为什么加了__strong就不会被提前释放？
+    //：在__strong修饰了weakSelf之后，VC的Retaincount增加了1，block代码块是存放在栈区的，执行完成之后会被系统自动回收，这时候strongSelf会被释放掉，此时self的引用计数才恢复正常
         __strong typeof(self) strongSelf = weakSelf;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             NSLog(@"%@", strongSelf.name);

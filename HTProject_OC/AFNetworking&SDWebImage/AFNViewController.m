@@ -28,7 +28,7 @@
      * 1> AFN的优点: 1.原有基础NSURLSession上封装了一层，在传参方面更灵活；回调更友好，支持返回数据序列化；支持文件上传，断点下载
      *              2.自带多线程，防死锁
      *              3.运用锁机制，保证线程安全
-     *              4.
+     *              4.支持网络图片加载
      *              5.处理了Https证书流程，节省移动端开发
      *              6.支持网络状态判断
      *              7.可以获取到当前的所有tasks（包括dataTasks, uploadTasks, downloadTasks），也可以单独获取dataTasks, uploadTasks, downloadTasks，方便管理
@@ -127,7 +127,7 @@
      * SDWebImage提供了加载图片的一系列方法，但是最终内部都会调用sd_internalSetImageWithURL:placeholderImage:options:context:setImageBlock:progress:completed:这个方法，源码解析如下：
      * 1> 先获取当前操作的key，然后根据这个key去取消当前key对应的下载任务
      * 2> 通过options(默认传0)和SDWebImageDelayPlaceholder做与运算得出是否在加载图片时先加载占位图
-     * 3> 判断url是否有效，如果有效，再判断是有设置progress回调，如果有，先置0；接着判断是否设置指示器，如果有z，则开启指示器
+     * 3> 判断url是否有效，如果有效，再判断是有设置progress回调，如果有，先置0；接着判断是否设置指示器，如果有，则开启指示器
      * 4> 创建一个SDWebImageManager；创建一个SDImageLoaderProgressBlock，根据这个progressBlock去设置用户自定义的progressBlock，并且更新指示器；
      *    创建一个SDWebImageOperation(内部校验了completedBlock和url不能为空，使用了信号量锁等)，
      *    尝试从缓存加载图片(内部会先检测是否需要查询缓存，如果需要查缓存，则先检测内存缓存，

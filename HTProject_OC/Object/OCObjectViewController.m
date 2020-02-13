@@ -51,11 +51,13 @@
     [btn addTarget:self action:@selector(action1) forControlEvents:UIControlEventTouchUpInside];
     [btn addTarget:self action:@selector(action2) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    //此时点击btn都会响应action1和action2
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
     [tap addTarget:self action:@selector(action3)];
     tap.delegate = self;
     [btn addGestureRecognizer:tap];
+    //此时点击btn会响应action3
 }
 
 - (void)action1{
@@ -70,6 +72,7 @@
     NSLog(@"action3");
 }
 
+//通过代理方法，判断是否是btn，如果是则不响应手势事件
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     if ([touch.view isKindOfClass:UIButton.class] ) {
         return NO;
