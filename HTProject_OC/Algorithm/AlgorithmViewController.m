@@ -187,7 +187,7 @@
     NSLog(@"sorted array --- %@", _array);
 }
 
-// 快速排序: 通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
+// 快速排序: 通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。时间复杂度为O(nlogn)
 - (void)quickSortArrayWithArray:(NSMutableArray *)array leftIndex:(NSInteger)low rightIndex:(NSInteger)high
 {
     NSInteger i = low;
@@ -221,5 +221,15 @@
     [self quickSortArrayWithArray:_array leftIndex:i+1 rightIndex:high];
     NSLog(@"sorted array --- %@", _array);
 }
+
+/******************* 常见算法题 **************************
+ *1、如何检测链表是否有环？
+ *  使用两种指针遍历链表，一个是慢指针（逐个遍历，即p->next），一个是快指针（跳个遍历，即p->next-next）,如果两个指针可能出现NULL，则说明不是循环链表；如果两个指针能重合则说明是循环链表，否则不是循环链表
+ *
+ *
+ *
+ *
+ *
+ **/
 
 @end

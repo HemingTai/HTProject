@@ -26,6 +26,20 @@ static int b = 2;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    /****** block的底层实现，可通过clang -rewrite-objc xx.m查看编译后的cpp文件******
+     * block内部实现是一个结构体， struct __block_impl {
+                               void *isa;
+                               int Flags;
+                               int Reserved;
+                               void *FuncPtr;
+                             };
+     * isa，指向所属类的指针，也就是block的类型
+       Flags，标志变量，在实现block的内部操作时会用到
+       Reserved，保留变量
+       FuncPtr，block执行时调用的函数指针
+     * 它包含了isa指针（包含isa指针的皆为对象），也就是说block也是一个对象(runtime里面，对象和类都是用结构体表示)。
+     *
+     */
     [self testBlock1];
     [self testBlock2];
     [self testBlock3];

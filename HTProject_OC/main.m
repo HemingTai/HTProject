@@ -61,6 +61,8 @@ int main(int argc, char * argv[]) {
          * 在每个自动释放池初始化调用 objc_autoreleasePoolPush 的时候，都会把一个 POOL_SENTINEL(哨兵对象) push 到自动释放池的栈顶，并且返回这个 POOL_SENTINEL 哨兵对象；而当方法 objc_autoreleasePoolPop 调用时，就会向自动释放池中的对象发送 release 消息，直到第一个 POOL_SENTINEL，所以AutoreleasePool可以嵌套，pop的时候总会释放到上次push的位置为止，
          * 多层的pool就是多个哨兵对象多次push而已，就像剥洋葱一样，每次一层，互不影响
          */
+        //延伸：autorelease对象何时释放？
+        //在没有手动干预Autorelease Pool的情况下，Autorelease对象是在当前的runloop迭代结束时释放的，而它能够释放的原因是系统在每个runloop迭代中都加入了自动释放池Push和Pop
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
