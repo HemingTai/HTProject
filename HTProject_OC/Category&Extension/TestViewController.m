@@ -40,6 +40,8 @@
     
     [self myTestFunction1];
     [self myTestFunction2];
+    //如果分类中有同名方法也只会执行最后一个分类的方法，同名的分类方法会被覆盖。
+    [self myTestFunction3];
     //在不使用runtime的关联对象方法前提下，直接调用会报错，有setAge方法，但是找不到_age变量
     self.age = @"30";
     NSLog(@"age:%@",self.age);//*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[TestViewController setAge:]: unrecognized selector sent to instance 0x10090e5a0'

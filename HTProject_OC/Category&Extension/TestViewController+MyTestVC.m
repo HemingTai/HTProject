@@ -18,6 +18,10 @@ static NSString *ageKey = @"AgeKey";
     NSLog(@"222222");
 }
 
+- (void)myTestFunction3 {
+    NSLog(@"333333");
+}
+
 - (void)setAge:(NSString *)age
 {
     objc_setAssociatedObject(self, &ageKey, age, OBJC_ASSOCIATION_COPY);

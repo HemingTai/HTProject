@@ -21,12 +21,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TestViewController (MyTestVC)
 //{
-//    NSString *_age;//分类中不可以添加成员变量，否则直接报错
+//    NSString *_age;//分类中不可以添加成员变量，否则直接报错；原因是经过编译的类在程序启动后就被runtime加载，没有机会调用addIvar。程序在运行时动态构建的类需要在调用objc_registerClassPair之后才可以被使用，同样没有机会再添加成员变量。
 //}
 
 @property(nonatomic, copy) NSString *age;//分类中可以声明属性，但是在get，set方法中找不到_age变量，所以如果调用self.age会报错
 
 - (void)myTestFunction2;
+
+- (void)myTestFunction3;
 
 @end
 

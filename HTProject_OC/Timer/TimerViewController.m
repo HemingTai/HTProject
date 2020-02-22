@@ -94,7 +94,7 @@
     
     //下面代码如果在返回时没有对timer进行销毁，会导致内存泄漏，但是使用了NSTimer+Swizzling后，即使不销毁也不会内存泄漏
 //    self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
-    self.timer = [NSTimer timerWithTimeInterval:3 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];UIButton
+    self.timer = [NSTimer timerWithTimeInterval:3 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
