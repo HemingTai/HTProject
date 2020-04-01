@@ -20,6 +20,13 @@ fetch分支：git fetch
 删除远程tag：git push origin :refs/tags/tag名
 推tag到仓库：git push origin tag名
 
+git设置代理:
+	git config --global http.proxy 'web-proxy.sg.softwaregrp.net:8080'
+	git config --global https.proxy 'web-proxy.sg.softwaregrp.net:8080'
+git取消代理:
+	git config --global --unset http.proxy
+	git config --global --unset https.proxy
+
 /*------------ fastlane 相关命令 ------------*/
 
 fastlane打包：fastlane action名称（如：fastlane development_build）
