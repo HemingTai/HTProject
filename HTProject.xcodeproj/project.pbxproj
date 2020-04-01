@@ -10,7 +10,6 @@
 		3F0E9C15690A8DA8B0955E0E /* Pods_HTProject_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6681FA9E8811026205E016CD /* Pods_HTProject_Swift.framework */; };
 		6F0DD7FB23BB100D00346EEC /* HTTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0DD7FA23BB100D00346EEC /* HTTableViewCell.m */; };
 		6F5A587723FF9B4200426EBD /* TestViewController+MyTestVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5A587623FF9B4200426EBD /* TestViewController+MyTestVC2.m */; };
-		6F5A587923FFA98800426EBD /* HTTPS原理图.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5A587823FFA98800426EBD /* HTTPS原理图.png */; };
 		6FC2C768242CA2AF00615998 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC2C767242CA2AF00615998 /* ContentView.swift */; };
 		94F4F3E118AFFBB59F699D14 /* Pods_HTProject_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCCD82F8D46E95EC2288FA6E /* Pods_HTProject_OC.framework */; };
 		9E20DF63239F425A00FC9168 /* HTCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E20DF62239F425A00FC9168 /* HTCollectionViewFlowLayout.m */; };
@@ -144,14 +143,17 @@
 		6A6B769A937A61E02EB34CB9 /* Pods-HTProject_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTProject_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HTProject_Swift/Pods-HTProject_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0DD7F923BB100D00346EEC /* HTTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTableViewCell.h; sourceTree = "<group>"; };
 		6F0DD7FA23BB100D00346EEC /* HTTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTableViewCell.m; sourceTree = "<group>"; };
+		6F0E850E24343476000BEC79 /* AFNetworking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AFNetworking.png; sourceTree = "<group>"; };
+		6F0E850F24343476000BEC79 /* HTTPS原理图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HTTPS原理图.png"; sourceTree = "<group>"; };
+		6F0E851024343476000BEC79 /* Runtime.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Runtime.pdf; sourceTree = "<group>"; };
+		6F0E851124343476000BEC79 /* Objc-类继承关系.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Objc-类继承关系.jpg"; sourceTree = "<group>"; };
+		6F0E851224343476000BEC79 /* Git Command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Git Command"; sourceTree = "<group>"; };
+		6F0E851324343476000BEC79 /* Objc-消息转发机制2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Objc-消息转发机制2.png"; sourceTree = "<group>"; };
+		6F0E851424343476000BEC79 /* Objc-消息转发机制1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Objc-消息转发机制1.png"; sourceTree = "<group>"; };
+		6F0E851524343476000BEC79 /* App启动过程图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App启动过程图.png"; sourceTree = "<group>"; };
 		6F5A587523FF9B4200426EBD /* TestViewController+MyTestVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestViewController+MyTestVC2.h"; sourceTree = "<group>"; };
 		6F5A587623FF9B4200426EBD /* TestViewController+MyTestVC2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestViewController+MyTestVC2.m"; sourceTree = "<group>"; };
-		6F5A587823FFA98800426EBD /* HTTPS原理图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HTTPS原理图.png"; sourceTree = "<group>"; };
 		6FC2C767242CA2AF00615998 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6FDD5A6123FA2834000CBFC6 /* App启动过程图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App启动过程图.png"; sourceTree = "<group>"; };
-		6FDD5A6223FA2834000CBFC6 /* Objective-C类关系图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Objective-C类关系图.png"; sourceTree = "<group>"; };
-		6FDD5A6423FA28A0000CBFC6 /* AFN类关系图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AFN类关系图.png"; sourceTree = "<group>"; };
-		6FDD5A6523FA29CA000CBFC6 /* Common Commands.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Common Commands.rtf"; sourceTree = "<group>"; };
 		9E20DF61239F425A00FC9168 /* HTCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		9E20DF62239F425A00FC9168 /* HTCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		9E4C90D7239DFDB8005573C3 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
@@ -386,16 +388,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6FDD5A6023FA27CC000CBFC6 /* Resource */ = {
+		6F0E850D24343476000BEC79 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6F5A587823FFA98800426EBD /* HTTPS原理图.png */,
-				6FDD5A6523FA29CA000CBFC6 /* Common Commands.rtf */,
-				6FDD5A6423FA28A0000CBFC6 /* AFN类关系图.png */,
-				6FDD5A6123FA2834000CBFC6 /* App启动过程图.png */,
-				6FDD5A6223FA2834000CBFC6 /* Objective-C类关系图.png */,
+				6F0E850E24343476000BEC79 /* AFNetworking.png */,
+				6F0E850F24343476000BEC79 /* HTTPS原理图.png */,
+				6F0E851024343476000BEC79 /* Runtime.pdf */,
+				6F0E851124343476000BEC79 /* Objc-类继承关系.jpg */,
+				6F0E851224343476000BEC79 /* Git Command */,
+				6F0E851324343476000BEC79 /* Objc-消息转发机制2.png */,
+				6F0E851424343476000BEC79 /* Objc-消息转发机制1.png */,
+				6F0E851524343476000BEC79 /* App启动过程图.png */,
 			);
-			path = Resource;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9E4C90D6239DFD8C005573C3 /* CollectionView */ = {
@@ -423,7 +428,7 @@
 		9EF5B95A238BBE1600145DB8 = {
 			isa = PBXGroup;
 			children = (
-				6FDD5A6023FA27CC000CBFC6 /* Resource */,
+				6F0E850D24343476000BEC79 /* Resources */,
 				9EF5B965238BBE1600145DB8 /* HTProject */,
 				9EF5B997238BBEDC00145DB8 /* HTProject_OC */,
 				9EF5B9B4238BBEF500145DB8 /* HTProject_Swift */,
@@ -1093,7 +1098,6 @@
 				9EF5BA64238BC04600145DB8 /* rsa_public_key.pem in Resources */,
 				9EF5BA89238BC04600145DB8 /* rsa_private_key.pem in Resources */,
 				9EF5B9A5238BBEDC00145DB8 /* Assets.xcassets in Resources */,
-				6F5A587923FFA98800426EBD /* HTTPS原理图.png in Resources */,
 				9EF5B9A3238BBEDC00145DB8 /* Main.storyboard in Resources */,
 				9EF5BA7D238BC04600145DB8 /* public_key.der in Resources */,
 				9EF5BA61238BC04600145DB8 /* private_key.p12 in Resources */,
