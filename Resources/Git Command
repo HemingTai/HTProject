@@ -1,6 +1,7 @@
 /*------------ git 相关命令 ------------*/
 
 新增修改：git add .
+取消最近一次新增修改：git reset HEAD
 提交修改：git commit -m"更新信息"
 拉取远程代码：git pull(origin 分支名)
 提交代码到远程：git push(origin 分支名)
@@ -27,9 +28,23 @@ git取消代理:
 	git config --global --unset http.proxy
 	git config --global --unset https.proxy
 
+git fork项目：
+	1、先fork到自己的仓库中
+	2、clone项目，并添加远程项目路径
+		git clone xxxxxxx.git
+		git remote add upstream xxxxxxx.git
+		使用git remote 查看，可以看到有upstream 和 origin
+	3、源项目与自己的本地代码进行合并
+		git pull upstream 或 git fetch upstream 或 git merge upstream
+	4、通过pull request提交到他人项目中
+
 /*------------ fastlane 相关命令 ------------*/
 
 fastlane打包：fastlane action名称（如：fastlane development_build）
+
+/*------------ Rubygem 相关命令 ------------*/
+
+使用代理：sudo gem install coocapods -p http://xxx.xxxx.xx:8080
 
 /*------------ pod 相关命令 ------------*/
 设置pod：pod setup
