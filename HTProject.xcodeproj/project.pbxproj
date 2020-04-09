@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10F1CA77243EC96300AA2C49 /* HigherOrderFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1CA76243EC96300AA2C49 /* HigherOrderFunction.swift */; };
 		3F0E9C15690A8DA8B0955E0E /* Pods_HTProject_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6681FA9E8811026205E016CD /* Pods_HTProject_Swift.framework */; };
 		6F0DD7FB23BB100D00346EEC /* HTTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0DD7FA23BB100D00346EEC /* HTTableViewCell.m */; };
 		6F5A587723FF9B4200426EBD /* TestViewController+MyTestVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5A587623FF9B4200426EBD /* TestViewController+MyTestVC2.m */; };
@@ -137,6 +138,7 @@
 
 /* Begin PBXFileReference section */
 		070249C2DDA473A52F989529 /* Pods-HTProject_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTProject_Swift.release.xcconfig"; path = "Target Support Files/Pods-HTProject_Swift/Pods-HTProject_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		10F1CA76243EC96300AA2C49 /* HigherOrderFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HigherOrderFunction.swift; sourceTree = "<group>"; };
 		165DC5430A59B679430C166E /* Pods-HTProject_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTProject_OC.debug.xcconfig"; path = "Target Support Files/Pods-HTProject_OC/Pods-HTProject_OC.debug.xcconfig"; sourceTree = "<group>"; };
 		24F36481BE34E11183DDECC1 /* Pods-HTProject_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTProject_OC.release.xcconfig"; path = "Target Support Files/Pods-HTProject_OC/Pods-HTProject_OC.release.xcconfig"; sourceTree = "<group>"; };
 		6681FA9E8811026205E016CD /* Pods_HTProject_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTProject_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -379,6 +381,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10F1CA75243EC92C00AA2C49 /* AdvanceFunction */ = {
+			isa = PBXGroup;
+			children = (
+				10F1CA76243EC96300AA2C49 /* HigherOrderFunction.swift */,
+			);
+			path = AdvanceFunction;
+			sourceTree = "<group>";
+		};
 		2EE8C0464DA2B47CD314F217 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +508,7 @@
 		9EF5B9B4238BBEF500145DB8 /* HTProject_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				10F1CA75243EC92C00AA2C49 /* AdvanceFunction */,
 				9EF5BAA2238BC1EC00145DB8 /* Algorithm */,
 				9EF5BA9D238BC1EC00145DB8 /* Animation */,
 				9EF5BA98238BC1EC00145DB8 /* Closure */,
@@ -1314,6 +1325,7 @@
 				9EF5BAA5238BC1EC00145DB8 /* ClosureViewController.swift in Sources */,
 				9EF5BAA7238BC1EC00145DB8 /* MySocketManager.swift in Sources */,
 				9EF5BAA4238BC1EC00145DB8 /* TestViewController.swift in Sources */,
+				10F1CA77243EC96300AA2C49 /* HigherOrderFunction.swift in Sources */,
 				9EF5BB29238D1D8500145DB8 /* SetAuthorizationViewController.swift in Sources */,
 				9EF5BAAA238BC1EC00145DB8 /* QRCodeViewController.swift in Sources */,
 				9EF5BB28238D1D8500145DB8 /* AnnotationViewController.swift in Sources */,
