@@ -44,7 +44,7 @@ fastlane打包：fastlane action名称（如：fastlane development_build）
 
 /*------------ Rubygem 相关命令 ------------*/
 
-使用代理：sudo gem install coocapods -p http://xxx.xxxx.xx:8080
+使用代理：sudo gem install xxx -p http://xxx.xxxx.xx:xxxx
 
 /*------------ pod 相关命令 ------------*/
 设置pod：pod setup

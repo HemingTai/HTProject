@@ -34,6 +34,12 @@ class HigherOrderFunction: UIViewController {
             }
             print(element)
         }
+        array.forEach {
+            if $0 == 3 {
+                return
+            }
+            print($0)
+        }
         print("end forEach")
         
         for element in array {
