@@ -38,6 +38,12 @@ git fork项目：
 		git pull upstream 或 git fetch upstream 或 git merge upstream
 	4、通过pull request提交到他人项目中
 
+git rebase相关：
+	1、git log 找到想要删除的提交id(简写为id-a)之前一次的提交id(简写为id-b)
+	2、git rebase -i id-b 回退到之前的版本，并在之后会提交需要的所有提交
+	3、删除并保存退出
+	4、git push origin branch-name --force
+
 /*------------ fastlane 相关命令 ------------*/
 
 fastlane打包：fastlane action名称（如：fastlane development_build）

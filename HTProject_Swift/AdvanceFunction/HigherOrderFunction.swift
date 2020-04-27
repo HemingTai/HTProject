@@ -73,7 +73,7 @@ class HigherOrderFunction: UIViewController {
         let mapArray2 = originalArray.map { return $0*2 }
         print(mapArray1, mapArray2)
         
-        //reduce: 接收两个参数，一个初始值和一个组合闭包(combine closure): 如下给定一个初始值，并把求和集合元素，会返回一个新值
+        //reduce: 接收两个参数，一个初始值和一个组合闭包(combine closure): 如下给定一个初始值，并求和集合元素，会返回一个新值
         let sum = originalArray.reduce(10, +)
         let name = ["alan", "brian", "charlie"]
         //name是集合中的元素，text相当于初始值和每一次元素连接之后的值，也可简写成$0,$1
