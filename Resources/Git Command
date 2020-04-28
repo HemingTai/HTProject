@@ -39,10 +39,14 @@ git fork项目：
 	4、通过pull request提交到他人项目中
 
 git rebase删除不必要的commit：
-	1、git log 找到想要删除的提交id(简写为id-a)之前一次的提交id(简写为id-b)
-	2、git rebase -i id-b 回退到之前的版本，并在之后会提交需要的所有提交
-	3、删除并保存退出
-	4、git push origin branch-name --force
+	1、git log 找到想要删除的提交id(id-a)之前一次的提交id(id-b)
+	2、git rebase -i id-b
+	3、git push origin branch-name --force
+ 
+ git 回退到指定版本：
+    1、git log 找到想要回退的id
+    2、git reset --hard id
+    3、git push origin HEAD --force
 
 /*------------ fastlane 相关命令 ------------*/
 
