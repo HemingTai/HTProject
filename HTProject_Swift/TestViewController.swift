@@ -12,7 +12,7 @@ class TestViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //当我们在一个普通的 controlle, view 上重写这个属性，只会影响当前的视图，不会影响前面的 controller 和后续 present 的 controller
+        //当我们在一个普通的 controller, view 上重写这个属性，只会影响当前的视图，不会影响前面的 controller 和后续 present 的 controller
         if #available(iOS 13.0, *) {
             self.overrideUserInterfaceStyle = .light
         }

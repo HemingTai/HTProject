@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ChooseImageViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class ChooseImageViewController: UIViewController {
     var imageView: UIImageView?
     let imagePicker = UIImagePickerController()
     override func viewDidLoad() {
@@ -26,12 +26,15 @@ class ChooseImageViewController: UIViewController,UIImagePickerControllerDelegat
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             imagePicker.allowsEditing = false
             imagePicker.sourceType = .photoLibrary
-            self.present(imagePicker, animated: true, completion: nil)
+            present(imagePicker, animated: true, completion: nil)
         }
     }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        imageView?.image = info["UIImagePickerControllerOriginalImage"] as! UIImage?
+}
+
+extension ChooseImageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imageView?.image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")] as! UIImage?
         imageView?.contentMode = .scaleAspectFit
         imageView?.clipsToBounds = true
         dismiss(animated: true, completion: nil)

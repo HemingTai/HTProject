@@ -39,9 +39,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		10497E60247D0B990077404A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75B5030FCD44F98D7356676C5B483BD7 /* Starscream */;
+			proxyType = 2;
+			remoteGlobalIDString = A1C7BBDF047AB067F2FC2FE385826904;
+			remoteInfo = Starscream;
+		};
 		F210925310D9DE79078C4DA63D0B635B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 75B5030FCD44F98D7356676C5B483BD7 /* Starscream.xcodeproj */;
+			containerPortal = 75B5030FCD44F98D7356676C5B483BD7 /* Starscream */;
 			proxyType = 1;
 			remoteGlobalIDString = B3A94BDF843832D7792471702D2E3688;
 			remoteInfo = Starscream;
@@ -77,7 +84,7 @@
 		9B59DBAB82B763E7DF3912CAD53C1BF7 /* SocketIOClientOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientOption.swift; path = Source/SocketIO/Client/SocketIOClientOption.swift; sourceTree = "<group>"; };
 		A5890FD15A00C9C0C78E6CC494CC0AF2 /* SocketStringReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketStringReader.swift; path = Source/SocketIO/Util/SocketStringReader.swift; sourceTree = "<group>"; };
 		A5CBA9AF3BCEADF20C898D1F62055085 /* SocketEnginePollable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEnginePollable.swift; path = Source/SocketIO/Engine/SocketEnginePollable.swift; sourceTree = "<group>"; };
-		ACE2AE29E1CDB08B45B98002F5E7912E /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocketIO.framework; path = "Socket.IO-Client-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE2AE29E1CDB08B45B98002F5E7912E /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD50A06A68AEDC2E07A2EAEC40E1767 /* SocketIOClientConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientConfiguration.swift; path = Source/SocketIO/Client/SocketIOClientConfiguration.swift; sourceTree = "<group>"; };
 		C6FB5FFB970EFD5FC13158420F7D4A5E /* SocketEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngine.swift; path = Source/SocketIO/Engine/SocketEngine.swift; sourceTree = "<group>"; };
 		C802E1BC6B2586F7B87E8D80FE1DBF17 /* SocketAckEmitter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckEmitter.swift; path = Source/SocketIO/Ack/SocketAckEmitter.swift; sourceTree = "<group>"; };
@@ -99,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10497E38247BA8F90077404A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10497E61247D0B990077404A /* Starscream.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2365A9DA61D6ED1AAE0E761B0E6DED02 /* Socket.IO-Client-Swift */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +144,6 @@
 				0149022C16522014E6D3F3E05D58BABB /* SSLSecurity.swift */,
 				FA582553F10826B3239D538AE0B858B9 /* Support Files */,
 			);
-			name = "Socket.IO-Client-Swift";
 			path = "Socket.IO-Client-Swift";
 			sourceTree = "<group>";
 		};
@@ -238,12 +252,14 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = B5811E25D9FFE221AB0D9E5437724E7A;
 			productRefGroup = 689248A0716E3C5B9D4EDB0F6F158845 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 10497E38247BA8F90077404A /* Products */;
 					ProjectRef = 75B5030FCD44F98D7356676C5B483BD7 /* Starscream */;
 				},
 			);
@@ -253,6 +269,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		10497E61247D0B990077404A /* Starscream.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Starscream.framework;
+			remoteRef = 10497E60247D0B990077404A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		33E78F21688977AFBC33EAE9A78C0C93 /* Resources */ = {

@@ -14,12 +14,19 @@ fetch分支：git fetch
 删除分支：git branch -d 分支名
 删除远程分支：git push origin --delete 分支名
 合并分支：git merge 分支名
+创建新分支并追踪远程分支：1、git branch --set-upstream-to=<远程主机名>/<远程分支名> <本地分支名>
+                      2、git push -u <远程主机名> <本地分支名>
+                      3、git checkout -b <本地分支名> <远程主机名>/<远程分支名>
+                      新分支指针指向 <远程主机名>/<远程分支名> 所指的位置，具体位置可用 gi t log --oneline --graph 查看
 
 查看tag：git tag
 创建tag：git tag tag名
 删除tag：git tag -d tag名
 删除远程tag：git push origin :refs/tags/tag名
 推tag到仓库：git push origin tag名
+
+查看local commit日志：git log
+查看remote commit日志：git reflog
 
 git设置代理:
 	git config --global http.proxy 'web-proxy.sg.softwaregrp.net:8080'
@@ -38,10 +45,20 @@ git fork项目：
 		git pull upstream 或 git fetch upstream 或 git merge upstream
 	4、通过pull request提交到他人项目中
 
-git rebase删除不必要的commit：
+git rebase对相关的commit做删除：
 	1、git log 找到想要删除的提交id(id-a)之前一次的提交id(id-b)
 	2、git rebase -i id-b
-	3、git push origin branch-name --force
+    3、把不需要的commit行首的pick改成d(或者drop)即删除
+	4、git push origin branch-name --force
+    如果不想删除或是合并则执行 git rebase --abort
+ 
+ git rebase对相关的commit做合并：
+    1、git log 找到想要合并的提交id(id-a)之前一次的提交id(id-b)
+    2、git rebase -i id-b
+    3、把不需要的commit行首的pick改成s(或者squash)即合并，注意列出来的commit记录必须保持第一条记录的行首是pick(或者p)，否则无法合并
+    4、修改合并后的commit信息
+    5、git push origin branch-name --force
+    如果不想合并则执行 git rebase --abort
  
  git 回退到指定版本：
     1、git log 找到想要回退的id
