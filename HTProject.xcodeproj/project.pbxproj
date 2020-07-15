@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10236CD724653C5F00470B84 /* HTObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10236CD624653C5F00470B84 /* HTObject.swift */; };
+		10D9A04E24AF06780070F599 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D9A04D24AF06780070F599 /* SearchViewController.swift */; };
 		10F1CA77243EC96300AA2C49 /* AdvanceFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1CA76243EC96300AA2C49 /* AdvanceFunctionViewController.swift */; };
 		3F0E9C15690A8DA8B0955E0E /* Pods_HTProject_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6681FA9E8811026205E016CD /* Pods_HTProject_Swift.framework */; };
 		6F0DD7FB23BB100D00346EEC /* HTTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0DD7FA23BB100D00346EEC /* HTTableViewCell.m */; };
@@ -149,6 +150,7 @@
 		10497E45247D04BB0077404A /* Runtime.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Runtime.pdf; sourceTree = "<group>"; };
 		10497E46247D04BB0077404A /* HTTPS原理图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HTTPS原理图.png"; sourceTree = "<group>"; };
 		10497E47247D04BB0077404A /* Objc-类继承关系.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Objc-类继承关系.jpg"; sourceTree = "<group>"; };
+		10D9A04D24AF06780070F599 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		10F1CA76243EC96300AA2C49 /* AdvanceFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvanceFunctionViewController.swift; sourceTree = "<group>"; };
 		165DC5430A59B679430C166E /* Pods-HTProject_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTProject_OC.debug.xcconfig"; path = "Target Support Files/Pods-HTProject_OC/Pods-HTProject_OC.debug.xcconfig"; sourceTree = "<group>"; };
 		24F36481BE34E11183DDECC1 /* Pods-HTProject_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTProject_OC.release.xcconfig"; path = "Target Support Files/Pods-HTProject_OC/Pods-HTProject_OC.release.xcconfig"; sourceTree = "<group>"; };
@@ -392,6 +394,14 @@
 			path = Property;
 			sourceTree = "<group>";
 		};
+		10D9A04C24AF06320070F599 /* SearchController */ = {
+			isa = PBXGroup;
+			children = (
+				10D9A04D24AF06780070F599 /* SearchViewController.swift */,
+			);
+			path = SearchController;
+			sourceTree = "<group>";
+		};
 		10F1CA75243EC92C00AA2C49 /* AdvanceFunction */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +538,7 @@
 				9EF5BB2B238D1D8D00145DB8 /* Demos */,
 				9EF5BA9F238BC1EC00145DB8 /* QRCode */,
 				9EF5BA9A238BC1EC00145DB8 /* SocketIO */,
+				10D9A04C24AF06320070F599 /* SearchController */,
 				9EF5BA97238BC1EC00145DB8 /* TestViewController.swift */,
 				9EF5B9B5238BBEF500145DB8 /* AppDelegate.swift */,
 				9EF5B9B7238BBEF500145DB8 /* SceneDelegate.swift */,
@@ -1336,6 +1347,7 @@
 				9EF5BB27238D1D8500145DB8 /* ScaleViewController.swift in Sources */,
 				9EF5B9B6238BBEF500145DB8 /* AppDelegate.swift in Sources */,
 				9EF5BB24238D1D8500145DB8 /* TopBannerView.swift in Sources */,
+				10D9A04E24AF06780070F599 /* SearchViewController.swift in Sources */,
 				9EF5BAA5238BC1EC00145DB8 /* ClosureViewController.swift in Sources */,
 				9EF5BAA7238BC1EC00145DB8 /* MySocketManager.swift in Sources */,
 				9EF5BAA4238BC1EC00145DB8 /* TestViewController.swift in Sources */,

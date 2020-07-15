@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-207" y="35"/>
         </scene>
-        <!--Choose Image View Controller-->
+        <!--UIStackView-->
         <scene sceneID="O59-cL-YDn">
             <objects>
-                <viewController id="7pc-R3-FCZ" customClass="ChooseImageViewController" customModule="HTProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7pc-R3-FCZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fvV-6j-YSB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,6 +70,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0d-Mh-O2N">
                                                 <rect key="frame" x="57" y="35" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="i4j-yW-oR4" kind="show" id="6XF-7K-6Fw"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x9p-Gd-d1h">
                                                 <rect key="frame" x="118" y="0.0" width="96" height="100"/>
@@ -94,11 +97,27 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="plI-ep-KcF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dUt-rO-ALy"/>
+                    <navigationItem key="navigationItem" title="UIStackView" id="dUt-rO-ALy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5w-Pd-Oft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598.55072463768124" y="34.821428571428569"/>
+            <point key="canvasLocation" x="538" y="35"/>
+        </scene>
+        <!--SearchViewController-->
+        <scene sceneID="Q0y-fn-3mr">
+            <objects>
+                <viewController title="SearchViewController" id="i4j-yW-oR4" customClass="SearchViewController" customModule="HTProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pEQ-aA-8jZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Vkk-qN-ySe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SearchViewController" id="ew5-vx-cI3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jz-OH-0rR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304" y="35"/>
         </scene>
     </scenes>
 </document>
