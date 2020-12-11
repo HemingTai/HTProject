@@ -81,7 +81,7 @@ fastlane打包：fastlane action名称（如：fastlane development_build）
 
 /*------------ i18N export 相关命令 ------------*/
     1、Xcode选择project —— 菜单栏选择Editor —— Export for localization —— 只选择导出English —— 选择导出位置并导出
-    2、把导出的文件copy到filter.sh文件所在位置 —— 打开终端并cd到filter.sh文件所在路径 —— 执行./filter.sh -f en.xliff
+    2、把导出的文件夹里的en.xliff文件copy到filter.sh文件所在位置 —— 打开终端并cd到filter.sh文件所在路径 —— 执行./filter.sh -f en.xliff
     3、执行命令之后，会在当前路径下多出一个out文件夹，把里面的en.xliff文件copy到上一层export文件下并替换旧的en.xliff文件
     4、当前路径下只保留export文件夹、filter.sh、import.sh三个文件，其余文件删除
 
