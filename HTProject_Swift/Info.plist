@@ -60,5 +60,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>http://maps.apple.com</string>
+		<string>comgooglemaps</string>
+		<string>iosamap</string>
+	</array>
 </dict>
 </plist>

@@ -18,7 +18,7 @@ fetch分支：git fetch
     1、git branch --set-upstream-to=<远程主机名>/<远程分支名> <本地分支名>
     2、git push -u <远程主机名> <本地分支名>
     3、git checkout -b <本地分支名> <远程主机名>/<远程分支名>
-    新分支指针指向 <远程主机名>/<远程分支名> 所指的位置，具体位置可用 gi t log --oneline --graph 查看
+    新分支指针指向 <远程主机名>/<远程分支名> 所指的位置，具体位置可用 git log --oneline --graph 查看
 
 查看tag：git tag
 创建tag：git tag tag名

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mpg-g4-sBD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mpg-g4-sBD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -62,13 +63,13 @@
                                         <rect key="frame" x="200" y="0.0" width="214" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWZ-XH-0MX">
-                                                <rect key="frame" x="0.0" y="40" width="42" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="40" width="41.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0d-Mh-O2N">
-                                                <rect key="frame" x="57" y="35" width="46" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0d-Mh-O2N">
+                                                <rect key="frame" x="56.5" y="35" width="46.5" height="30"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <segue destination="i4j-yW-oR4" kind="show" id="6XF-7K-6Fw"/>
@@ -89,13 +90,13 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="plI-ep-KcF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="E5Y-QF-akH" firstAttribute="leading" secondItem="plI-ep-KcF" secondAttribute="leading" id="Oxm-Ya-jwK"/>
                             <constraint firstItem="plI-ep-KcF" firstAttribute="trailing" secondItem="E5Y-QF-akH" secondAttribute="trailing" id="ZrM-d1-co2"/>
                             <constraint firstItem="E5Y-QF-akH" firstAttribute="top" secondItem="plI-ep-KcF" secondAttribute="top" id="pph-83-TOX"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="plI-ep-KcF"/>
                     </view>
                     <navigationItem key="navigationItem" title="UIStackView" id="dUt-rO-ALy"/>
                 </viewController>
@@ -106,7 +107,7 @@
         <!--SearchViewController-->
         <scene sceneID="Q0y-fn-3mr">
             <objects>
-                <viewController title="SearchViewController" id="i4j-yW-oR4" customClass="SearchViewController" customModule="HTProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SearchViewController" id="i4j-yW-oR4" customClass="MapViewController" customModule="HTProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pEQ-aA-8jZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,17 +115,22 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3S1-zR-CPd" customClass="RichEditorView" customModule="HTProject_Swift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="621"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Vkk-qN-ySe"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SearchViewController" id="ew5-vx-cI3"/>
+                    <navigationItem key="navigationItem" title="MapViewController" id="ew5-vx-cI3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jz-OH-0rR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1302.8985507246377" y="34.821428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

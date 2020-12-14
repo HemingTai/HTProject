@@ -13,6 +13,7 @@
 		10F1CA77243EC96300AA2C49 /* AdvanceFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1CA76243EC96300AA2C49 /* AdvanceFunctionViewController.swift */; };
 		3F0E9C15690A8DA8B0955E0E /* Pods_HTProject_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6681FA9E8811026205E016CD /* Pods_HTProject_Swift.framework */; };
 		6F0DD7FB23BB100D00346EEC /* HTTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0DD7FA23BB100D00346EEC /* HTTableViewCell.m */; };
+		6F1AD157256F86F90074BFAF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1AD156256F86F90074BFAF /* MapViewController.swift */; };
 		6F5A587723FF9B4200426EBD /* TestViewController+MyTestVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5A587623FF9B4200426EBD /* TestViewController+MyTestVC2.m */; };
 		6FC2C768242CA2AF00615998 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC2C767242CA2AF00615998 /* ContentView.swift */; };
 		94F4F3E118AFFBB59F699D14 /* Pods_HTProject_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCCD82F8D46E95EC2288FA6E /* Pods_HTProject_OC.framework */; };
@@ -172,6 +173,7 @@
 		6A6B769A937A61E02EB34CB9 /* Pods-HTProject_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTProject_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HTProject_Swift/Pods-HTProject_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0DD7F923BB100D00346EEC /* HTTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTableViewCell.h; sourceTree = "<group>"; };
 		6F0DD7FA23BB100D00346EEC /* HTTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTableViewCell.m; sourceTree = "<group>"; };
+		6F1AD156256F86F90074BFAF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6F5A587523FF9B4200426EBD /* TestViewController+MyTestVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestViewController+MyTestVC2.h"; sourceTree = "<group>"; };
 		6F5A587623FF9B4200426EBD /* TestViewController+MyTestVC2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestViewController+MyTestVC2.m"; sourceTree = "<group>"; };
 		6FC2C767242CA2AF00615998 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -572,6 +574,7 @@
 				9EF5BA9A238BC1EC00145DB8 /* SocketIO */,
 				10D9A04C24AF06320070F599 /* SearchController */,
 				9EF5BA97238BC1EC00145DB8 /* TestViewController.swift */,
+				6F1AD156256F86F90074BFAF /* MapViewController.swift */,
 				9EF5B9B5238BBEF500145DB8 /* AppDelegate.swift */,
 				9EF5B9B7238BBEF500145DB8 /* SceneDelegate.swift */,
 				9EF5B9BB238BBEF500145DB8 /* Main.storyboard */,
@@ -1420,6 +1423,7 @@
 				10D9A04E24AF06780070F599 /* SearchViewController.swift in Sources */,
 				9EF5BAA5238BC1EC00145DB8 /* ClosureViewController.swift in Sources */,
 				9EF5BAA7238BC1EC00145DB8 /* MySocketManager.swift in Sources */,
+				6F1AD157256F86F90074BFAF /* MapViewController.swift in Sources */,
 				9EF5BAA4238BC1EC00145DB8 /* TestViewController.swift in Sources */,
 				10F1CA77243EC96300AA2C49 /* AdvanceFunctionViewController.swift in Sources */,
 				9EF5BB29238D1D8500145DB8 /* SetAuthorizationViewController.swift in Sources */,
