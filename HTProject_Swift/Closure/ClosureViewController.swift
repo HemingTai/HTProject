@@ -20,11 +20,7 @@ class ClosureViewController: UIViewController {
         print("result: \(incrementByTwo())")
         print("result: \(incrementByTwo())")
     }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.navigationController?.pushViewController(AnimationViewController(), animated: true)
-    }
-    
+
     func myIncrementor(param:Int) -> () -> Int {
         var temp = 0
         func increment() -> Int {

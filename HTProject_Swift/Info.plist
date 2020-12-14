@@ -62,9 +62,9 @@
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>http://maps.apple.com</string>
 		<string>comgooglemaps</string>
 		<string>iosamap</string>
+		<string>waze</string>
 	</array>
 </dict>
 </plist>

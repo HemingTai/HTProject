@@ -16,6 +16,14 @@ class TestViewController: UIViewController {
         if #available(iOS 13.0, *) {
             self.overrideUserInterfaceStyle = .light
         }
+        
+        /********* [unowned self] 和 [weak self]区别 *********
+         * swift虽然使用了ARC自动引用计数来管理内存，但是也不能保证完全准确，在使用闭包的时候有可能会引起循环引用
+         * 所以此时只需将闭包捕获列表定义为弱引用(weak)或者无主引用(unowned)即可解决问题
+         * 如果捕获（比如 self）可以被设置为 nil，也就是说它可能在闭包前被销毁，那么就要将捕获定义为 weak
+         * 如果它们一直是相互引用，即同时销毁的，那么就可以将捕获定义为 unowned
+         */
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
