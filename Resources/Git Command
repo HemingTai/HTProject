@@ -19,6 +19,8 @@ fetch分支：git fetch
     2、git push -u <远程主机名> <本地分支名>
     3、git checkout -b <本地分支名> <远程主机名>/<远程分支名>
     新分支指针指向 <远程主机名>/<远程分支名> 所指的位置，具体位置可用 git log --oneline --graph 查看
+已有分支追踪远程分支：
+    git branch --set-upstream-to=<远程主机名>/<远程分支名>
 
 查看tag：git tag
 创建tag：git tag tag名
@@ -45,6 +47,14 @@ git fork项目：
 	3、源项目与自己的本地代码进行合并
 		git pull upstream 或 git fetch upstream 或 git merge upstream
 	4、通过pull request提交到他人项目中
+ 
+git 切换ssh方式登录：
+    1、打开终端 cd 到 ~/.ssh，查看是否有 id_rsa 和 id_rsa.pub文件，如果没有则执行命令 ssh -keygen，一路回车直到结束
+    2、在 github 上的setting中，把 id_rsa.pub 文件的公钥添加到 SSH KEY 中
+    3、在终端 cd 到项目路径，然后执行 git remote -v 查看 origin 是否是git@github.xxxx/username/reponame.git形式
+    4、如果不是则执行 git remote remove origin 先移除之前的 https 的方式
+    5、再执行 git remote add origin git@github.xxx:username/reponame.git
+    6、最后执行 git remote -v 查看是否设置成功
 
 git rebase对相关的commit做删除：
 	1、git log 找到想要删除的提交id(id-a)之前一次的提交id(id-b)

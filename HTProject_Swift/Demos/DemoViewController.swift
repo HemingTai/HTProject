@@ -100,22 +100,24 @@ class DemoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let shareAction = UITableViewRowAction(style: .normal, title: "More") { (UITableViewRowAction, NSIndexPath) in
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let shareAction = UIContextualAction(style: .normal, title: "More") { (action, view, completion) in
             let shareMenu = UIAlertController(title: nil, message: "Share Using", preferredStyle: .actionSheet)
             let QQAction = UIAlertAction(title:"QQ",style:.default,handler: nil)
             let WeixinAction = UIAlertAction(title: "Weixin", style: .default, handler: nil)
             shareMenu.addAction(QQAction)
             shareMenu.addAction(WeixinAction)
             self.present(shareMenu,animated:true, completion:nil)
+            completion(true)
         }
-        
-        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { (UITableViewRowAction, NSIndexPath) in
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
             let index = indexPath.row as Int
             self.dataArray .remove(at: index)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
-        return [deleteAction,shareAction]
+        let config = UISwipeActionsConfiguration(actions: [shareAction, deleteAction])
+        config.performsFirstActionWithFullSwipe = false
+        return config
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -145,5 +147,14 @@ class DemoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
+        if indexPath.row < 1 {
+            return 0
+        } else if indexPath.row < 2 {
+            return 1
+        } else {
+            return 2
+        }
+    }
 }
-

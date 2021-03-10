@@ -12,9 +12,13 @@
 		10D9A04E24AF06780070F599 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D9A04D24AF06780070F599 /* SearchViewController.swift */; };
 		10F1CA77243EC96300AA2C49 /* AdvanceFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1CA76243EC96300AA2C49 /* AdvanceFunctionViewController.swift */; };
 		3F0E9C15690A8DA8B0955E0E /* Pods_HTProject_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6681FA9E8811026205E016CD /* Pods_HTProject_Swift.framework */; };
+		6F0327A525BEB3DA005D3727 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0327A425BEB3DA005D3727 /* Collection+Extensions.swift */; };
+		6F0327AC25BEB3F5005D3727 /* Operator+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0327AB25BEB3F5005D3727 /* Operator+Extensions.swift */; };
+		6F0327BE25C1529A005D3727 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0327BD25C1529A005D3727 /* TestViewController.swift */; };
 		6F0DD7FB23BB100D00346EEC /* HTTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0DD7FA23BB100D00346EEC /* HTTableViewCell.m */; };
 		6F1AD157256F86F90074BFAF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1AD156256F86F90074BFAF /* MapViewController.swift */; };
 		6F5A587723FF9B4200426EBD /* TestViewController+MyTestVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5A587623FF9B4200426EBD /* TestViewController+MyTestVC2.m */; };
+		6F7CC55B25B1907600056125 /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7CC55A25B1907600056125 /* CombineViewController.swift */; };
 		6FC2C768242CA2AF00615998 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC2C767242CA2AF00615998 /* ContentView.swift */; };
 		94F4F3E118AFFBB59F699D14 /* Pods_HTProject_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCCD82F8D46E95EC2288FA6E /* Pods_HTProject_OC.framework */; };
 		9E20DF63239F425A00FC9168 /* HTCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E20DF62239F425A00FC9168 /* HTCollectionViewFlowLayout.m */; };
@@ -86,7 +90,7 @@
 		9EF5BA93238BC04600145DB8 /* HTSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA58238BC04600145DB8 /* HTSocketManager.m */; };
 		9EF5BA94238BC04600145DB8 /* HTSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA5C238BC04600145DB8 /* HTSocketManager.swift */; };
 		9EF5BA95238BC04600145DB8 /* NSStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA5F238BC04600145DB8 /* NSStringViewController.m */; };
-		9EF5BAA4238BC1EC00145DB8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA97238BC1EC00145DB8 /* TestViewController.swift */; };
+		9EF5BAA4238BC1EC00145DB8 /* UITestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA97238BC1EC00145DB8 /* UITestViewController.swift */; };
 		9EF5BAA5238BC1EC00145DB8 /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA99238BC1EC00145DB8 /* ClosureViewController.swift */; };
 		9EF5BAA6238BC1EC00145DB8 /* SocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA9B238BC1EC00145DB8 /* SocketViewController.swift */; };
 		9EF5BAA7238BC1EC00145DB8 /* MySocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5BA9C238BC1EC00145DB8 /* MySocketManager.swift */; };
@@ -171,11 +175,15 @@
 		24F36481BE34E11183DDECC1 /* Pods-HTProject_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTProject_OC.release.xcconfig"; path = "Target Support Files/Pods-HTProject_OC/Pods-HTProject_OC.release.xcconfig"; sourceTree = "<group>"; };
 		6681FA9E8811026205E016CD /* Pods_HTProject_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTProject_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6B769A937A61E02EB34CB9 /* Pods-HTProject_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTProject_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HTProject_Swift/Pods-HTProject_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		6F0327A425BEB3DA005D3727 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		6F0327AB25BEB3F5005D3727 /* Operator+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operator+Extensions.swift"; sourceTree = "<group>"; };
+		6F0327BD25C1529A005D3727 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		6F0DD7F923BB100D00346EEC /* HTTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTableViewCell.h; sourceTree = "<group>"; };
 		6F0DD7FA23BB100D00346EEC /* HTTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTableViewCell.m; sourceTree = "<group>"; };
 		6F1AD156256F86F90074BFAF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6F5A587523FF9B4200426EBD /* TestViewController+MyTestVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestViewController+MyTestVC2.h"; sourceTree = "<group>"; };
 		6F5A587623FF9B4200426EBD /* TestViewController+MyTestVC2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestViewController+MyTestVC2.m"; sourceTree = "<group>"; };
+		6F7CC55A25B1907600056125 /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
 		6FC2C767242CA2AF00615998 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9E20DF61239F425A00FC9168 /* HTCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		9E20DF62239F425A00FC9168 /* HTCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTCollectionViewFlowLayout.m; sourceTree = "<group>"; };
@@ -305,7 +313,7 @@
 		9EF5BA5C238BC04600145DB8 /* HTSocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTSocketManager.swift; sourceTree = "<group>"; };
 		9EF5BA5E238BC04600145DB8 /* NSStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringViewController.h; sourceTree = "<group>"; };
 		9EF5BA5F238BC04600145DB8 /* NSStringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringViewController.m; sourceTree = "<group>"; };
-		9EF5BA97238BC1EC00145DB8 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		9EF5BA97238BC1EC00145DB8 /* UITestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestViewController.swift; sourceTree = "<group>"; };
 		9EF5BA99238BC1EC00145DB8 /* ClosureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
 		9EF5BA9B238BC1EC00145DB8 /* SocketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketViewController.swift; sourceTree = "<group>"; };
 		9EF5BA9C238BC1EC00145DB8 /* MySocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySocketManager.swift; sourceTree = "<group>"; };
@@ -451,6 +459,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6F0327A325BEB37F005D3727 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6F0327A425BEB3DA005D3727 /* Collection+Extensions.swift */,
+				6F0327AB25BEB3F5005D3727 /* Operator+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		6F0E850D24343476000BEC79 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +581,7 @@
 		9EF5B9B4238BBEF500145DB8 /* HTProject_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				6F0327A325BEB37F005D3727 /* Utils */,
 				10236CD524653C3A00470B84 /* Property */,
 				10F1CA75243EC92C00AA2C49 /* AdvanceFunction */,
 				9EF5BAA2238BC1EC00145DB8 /* Algorithm */,
@@ -573,8 +591,10 @@
 				9EF5BA9F238BC1EC00145DB8 /* QRCode */,
 				9EF5BA9A238BC1EC00145DB8 /* SocketIO */,
 				10D9A04C24AF06320070F599 /* SearchController */,
-				9EF5BA97238BC1EC00145DB8 /* TestViewController.swift */,
+				6F0327BD25C1529A005D3727 /* TestViewController.swift */,
+				9EF5BA97238BC1EC00145DB8 /* UITestViewController.swift */,
 				6F1AD156256F86F90074BFAF /* MapViewController.swift */,
+				6F7CC55A25B1907600056125 /* CombineViewController.swift */,
 				9EF5B9B5238BBEF500145DB8 /* AppDelegate.swift */,
 				9EF5B9B7238BBEF500145DB8 /* SceneDelegate.swift */,
 				9EF5B9BB238BBEF500145DB8 /* Main.storyboard */,
@@ -1413,23 +1433,27 @@
 				9EF5BB23238D1D8500145DB8 /* DemoViewController.swift in Sources */,
 				9EF5BB26238D1D8500145DB8 /* SpringViewController.swift in Sources */,
 				9EF5BAAB238BC1EC00145DB8 /* AlgorithmViewController.swift in Sources */,
+				6F0327AC25BEB3F5005D3727 /* Operator+Extensions.swift in Sources */,
 				9EF5BAA6238BC1EC00145DB8 /* SocketViewController.swift in Sources */,
 				10236CD724653C5F00470B84 /* HTObject.swift in Sources */,
 				9EF5BB25238D1D8500145DB8 /* HorseRaceLampViewController.swift in Sources */,
 				9EF5BB2A238D1D8500145DB8 /* ChooseImageViewController.swift in Sources */,
 				9EF5BB27238D1D8500145DB8 /* ScaleViewController.swift in Sources */,
 				9EF5B9B6238BBEF500145DB8 /* AppDelegate.swift in Sources */,
+				6F0327BE25C1529A005D3727 /* TestViewController.swift in Sources */,
 				9EF5BB24238D1D8500145DB8 /* TopBannerView.swift in Sources */,
 				10D9A04E24AF06780070F599 /* SearchViewController.swift in Sources */,
 				9EF5BAA5238BC1EC00145DB8 /* ClosureViewController.swift in Sources */,
 				9EF5BAA7238BC1EC00145DB8 /* MySocketManager.swift in Sources */,
 				6F1AD157256F86F90074BFAF /* MapViewController.swift in Sources */,
-				9EF5BAA4238BC1EC00145DB8 /* TestViewController.swift in Sources */,
+				9EF5BAA4238BC1EC00145DB8 /* UITestViewController.swift in Sources */,
+				6F0327A525BEB3DA005D3727 /* Collection+Extensions.swift in Sources */,
 				10F1CA77243EC96300AA2C49 /* AdvanceFunctionViewController.swift in Sources */,
 				9EF5BB29238D1D8500145DB8 /* SetAuthorizationViewController.swift in Sources */,
 				9EF5BAAA238BC1EC00145DB8 /* QRCodeViewController.swift in Sources */,
 				9EF5BB28238D1D8500145DB8 /* AnnotationViewController.swift in Sources */,
 				9EF5B9B8238BBEF500145DB8 /* SceneDelegate.swift in Sources */,
+				6F7CC55B25B1907600056125 /* CombineViewController.swift in Sources */,
 				9EF5BAA8238BC1EC00145DB8 /* AnimationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1739,7 +1763,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D33YTSRS2F;
 				INFOPLIST_FILE = HTProject_Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1762,7 +1786,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D33YTSRS2F;
 				INFOPLIST_FILE = HTProject_Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
