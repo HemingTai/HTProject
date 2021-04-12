@@ -80,6 +80,9 @@ git rebase对相关的commit做删除：
     1、git rebase [startpoint] [endpoint] --onto [branchName]
     2、git checkout [branchName]
     3、git reset --hard [latestCommitId]
+    
+ git 打包生成差异化文件
+    git format-patch -1 <commit-id>
 
 /*------------ fastlane 相关命令 ------------*/
 
