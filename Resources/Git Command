@@ -32,8 +32,8 @@ fetch分支：git fetch
 查看remote commit日志：git reflog
 
 git 设置代理:
-	git config --global http.proxy 'web-proxy.sg.softwaregrp.net:8080'
-	git config --global https.proxy 'web-proxy.sg.softwaregrp.net:8080'
+	git config --global http.proxy 'web-proxy.ap.softwaregrp.net:8080'
+	git config --global https.proxy 'web-proxy.ap.softwaregrp.net:8080'
 git 取消代理:
 	git config --global --unset http.proxy
 	git config --global --unset https.proxy

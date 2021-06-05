@@ -9,15 +9,14 @@
 import Foundation
 import UIKit
 
-enum Direction
-{
+enum Direction {
     case DirectionLeft    //向左滑
     case DirectionRight   //向右滑
     case DirectionNone    //未滑动
 }
 
-class TopBannerView: UIView,UIScrollViewDelegate
-{
+class TopBannerView: UIView,UIScrollViewDelegate {
+    
     var autoScrollTimeInterval:TimeInterval?               //自动滚动时间间隔
     var scrollView            :UIScrollView?               //滚动视图
     var imgWidth              :CGFloat?                    //图片宽度
@@ -29,42 +28,32 @@ class TopBannerView: UIView,UIScrollViewDelegate
     var nextIndex             :NSInteger?                  //下一索引
     var ADsArray              :[UIColor]?                  //图片数组
     var timer                 :Timer?                      //定时器
-    var enableAutoScroll:Bool = true                       //自动滚动
-    {
-        didSet
-        {
-            if enableAutoScroll
-            {
+    var enableAutoScroll:Bool = true {                      //自动滚动
+        didSet {
+            if enableAutoScroll {
                 self.startTimer()
             }
         }
     }
-    var direction : Direction = .DirectionNone  //滚动方向
-    {
+    var direction : Direction = .DirectionNone {  //滚动方向
         //设置新值之前
-        willSet
-        {
-            if newValue == direction
-            {
+        willSet {
+            if newValue == direction {
                 return
             }
         }
         //设置新值之后
-        didSet
-        {
+        didSet {
             //向右滚动
-            if direction == .DirectionRight
-            {
+            if direction == .DirectionRight {
                 nextView?.frame = CGRect(x: 0, y: 0, width: imgWidth!, height: imgHeight!)
                 nextIndex = currentIndex!-1
-                if nextIndex! < 0
-                {
+                if nextIndex! < 0 {
                     nextIndex = (ADsArray?.count)! - 1
                 }
             }
             //向左滚动
-            if direction == .DirectionLeft
-            {
+            if direction == .DirectionLeft {
                 nextView?.frame = CGRect(x: 2*imgWidth!, y: 0, width: imgWidth!, height: imgHeight!)
                 nextIndex = (currentIndex!+1) % (ADsArray?.count)!
             }
@@ -72,8 +61,7 @@ class TopBannerView: UIView,UIScrollViewDelegate
         }
     }
     
-    override init(frame: CGRect)
-    {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         
         imgWidth  = frame.size.width
@@ -107,17 +95,13 @@ class TopBannerView: UIView,UIScrollViewDelegate
         pageControl?.numberOfPages = (ADsArray?.count)!
     }
     
-    required init?(coder aDecoder: NSCoder)
-    {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit
-    {
-        if timer != nil
-        {
-            if timer!.isValid
-            {
+    deinit {
+        if timer != nil {
+            if timer!.isValid {
                 timer?.invalidate()
             }
             timer = nil
@@ -125,72 +109,58 @@ class TopBannerView: UIView,UIScrollViewDelegate
     }
     
     /// 开启定时器
-    func startTimer()
-    {
+    func startTimer() {
         self.stopTimer()
-        if (ADsArray?.count)! > 1
-        {
+        if (ADsArray?.count)! > 1 {
             timer = Timer.scheduledTimer(timeInterval: autoScrollTimeInterval!, target: self, selector: #selector(self.nextImage), userInfo: nil, repeats: true)
-        }
-        else
-        {
+        } else {
             return
         }
     }
     
     /// 关闭定时器
-    func stopTimer()
-    {
-        if timer != nil && (timer?.isValid)!
-        {
+    func stopTimer() {
+        if timer != nil && (timer?.isValid)! {
             timer?.invalidate()
             timer = nil
         }
     }
     
     /// 滚动到下一张图片
-    @objc func nextImage()
-    {
+    @objc func nextImage() {
         scrollView?.setContentOffset(CGPoint(x: imgWidth!*2, y: 0), animated: true)
     }
     
     //MARK: -----UIScrollViewDelegate-----
-    func scrollViewDidScroll(_ scrollView: UIScrollView)
-    {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetX = scrollView.contentOffset.x;
         self.direction = offsetX > imgWidth! ? .DirectionLeft : offsetX < imgWidth! ? .DirectionRight : .DirectionNone
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)
-    {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         self.pauseScroll()
     }
     
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView)
-    {
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         self.pauseScroll()
     }
     
     //开始拖拽时停止定时器
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView)
-    {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.stopTimer()
     }
     
     //拖拽结束后开启定时器
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool)
-    {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         self.startTimer()
     }
     
     ///停止滚动
-    func pauseScroll()
-    {
+    func pauseScroll() {
         let offset = self.scrollView!.contentOffset.x;
         let index = offset / self.imgWidth!
         //1表示没有滚动
-        if index == 1
-        {
+        if index == 1 {
             return
         }
         self.currentIndex = self.nextIndex

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnimationViewController: BaseViewController {
+class AnimationViewController: UIViewController {
     
     var myView = UIButton(type: .custom)
     
@@ -16,7 +16,7 @@ class AnimationViewController: BaseViewController {
         super.viewDidLoad()
         self.navigationItem.title = "动画"
         self.view.backgroundColor = .white
-        
+
         myView.frame = CGRect(x: 100, y: 182, width: 175, height: 175)
         myView.backgroundColor = .orange
         myView.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
