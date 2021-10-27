@@ -84,6 +84,9 @@ git rebase对相关的commit做删除：
  git 打包生成差异化文件
     git format-patch -1 <commit-id>
 
+ git 合并patch
+ 	git apply patch路径
+
 /*------------ fastlane 相关命令 ------------*/
 
 fastlane打包：fastlane action名称（如：fastlane development_build）
@@ -99,7 +102,7 @@ export:
     3、执行命令之后，会在当前路径下多出一个out文件夹，把里面的en.xliff文件copy到上一层export文件下并替换旧的en.xliff文件
     4、当前路径下只保留export文件夹、filter.sh、import.sh三个文件，其余文件删除
 import:
-    1、打开终端并cd到filter.sh文件所在路径 —— 执行sh import.sh
+    1、打开终端并cd到filter.sh文件所在路径 —— 执行 sh import.sh
 
 /*------------ pod 相关命令 ------------*/
 设置pod：pod setup
