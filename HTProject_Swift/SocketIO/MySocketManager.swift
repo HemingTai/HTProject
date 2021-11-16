@@ -11,9 +11,7 @@ import UIKit
 
 class MySocketManager: NSObject {
     
-    static let shared = customConfiguration()
-    
-    fileprivate class func customConfiguration() -> SocketManager {
+    static var shared: SocketManager {
         /*config配置：
          *.log(true)：一般用于debug，会输出log信息，传入false则不输出log信息
          *.forceNew(true)：每次调用connect时，都会创建一个新引擎
@@ -22,6 +20,14 @@ class MySocketManager: NSObject {
          *.reconnectWait(20)：最小重连等待时间
          *.reconnectWaitMax(40)：最大重连等待时间
          */
-        return SocketManager(socketURL: URL(string: "https://socket.gjmetal.com")!, config: [.log(true), .compress, .connectParams(["userName":"guojin"]), .forceNew(true), .reconnects(true), .reconnectAttempts(10), .reconnectWait(20), .reconnectWaitMax(40)])
+        SocketManager(socketURL: URL(string: "https://socket.gjmetal.com")!,
+                      config: [.log(true),
+                                .compress,
+                                .connectParams(["userName":"guojin"]),
+                                .forceNew(true),
+                                .reconnects(true),
+                                .reconnectAttempts(10),
+                                .reconnectWait(20),
+                                .reconnectWaitMax(40)])
     }
 }
