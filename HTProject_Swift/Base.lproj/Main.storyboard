@@ -28,12 +28,12 @@
                         </navigationBarAppearance>
                     </navigationBar>
                     <connections>
-                        <segue destination="i4j-yW-oR4" kind="relationship" relationship="rootViewController" id="fc5-g9-hhN"/>
+                        <segue destination="7pc-R3-FCZ" kind="relationship" relationship="rootViewController" id="Ik6-9p-63b"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJJ-7v-VgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-207" y="35"/>
+            <point key="canvasLocation" x="-614" y="35"/>
         </scene>
         <!--UI Test-->
         <scene sceneID="O59-cL-YDn">
@@ -44,7 +44,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-DG-Pm9">
-                                <rect key="frame" x="0.0" y="44" width="428" height="90"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VStackLabel1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kJ-Ur-0Te">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="30"/>
@@ -73,7 +73,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUt-ip-wob">
-                                <rect key="frame" x="0.0" y="134" width="428" height="30"/>
+                                <rect key="frame" x="0.0" y="178" width="428" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HStackLabel1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWZ-XH-0MX">
                                         <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="30"/>
@@ -122,7 +122,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5w-Pd-Oft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Bt3-Ql-U5Y"/>
             </objects>
-            <point key="canvasLocation" x="537.68115942028987" y="34.821428571428569"/>
+            <point key="canvasLocation" x="613" y="-415"/>
         </scene>
         <!--Home-->
         <scene sceneID="Q0y-fn-3mr">
@@ -133,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Input here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TxU-P6-RWU">
-                                <rect key="frame" x="20" y="188" width="388" height="40"/>
+                                <rect key="frame" x="20" y="144" width="388" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Zqc-oE-yFr"/>
                                 </constraints>
@@ -157,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jz-OH-0rR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1302.8985507246377" y="34.821428571428569"/>
+            <point key="canvasLocation" x="613" y="341"/>
         </scene>
     </scenes>
     <resources>

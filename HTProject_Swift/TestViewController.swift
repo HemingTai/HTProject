@@ -68,6 +68,14 @@ class TestViewController: UIViewController {
         for case let str as String in list {
             print("==== \(str) ====")
         }
+        
+    /******************************************************/
+        let array1 = [1,2,3,4]
+        let array2 = [2,3,4]
+        //同时遍历两个数组
+        for (item1, item2) in zip(array1, array2) {
+            print(item1, item2)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
