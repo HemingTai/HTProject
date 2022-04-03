@@ -36,6 +36,46 @@ class TestViewController: UIViewController {
         print(intArray2.distinct(keyFunc: { String($0) }))
         print(intArray2.removeFirst { $0 < 3 }, intArray2)
         print(intArray2.removeAll { $0 < 3 }, intArray2)
+        
+    /******************************************************/
+        for i in 0..<intArray.count {
+            print("=== index: \(i), value: \(intArray[i])")
+        }
+        //带index的循环遍历 等价于上面的 for in
+        for (i, v) in intArray.enumerated() {
+            print("=== index: \(i), value: \(v)")
+        }
+        
+    /******************************************************/
+        for i in intArray {
+            if i > 5 {
+                print("===== \(i) =====")
+            }
+        }
+        // 带条件的循环遍历 等价于上面的 for in
+        for i in intArray where i > 5 {
+            print("===== \(i) =====")
+        }
+        
+    /******************************************************/
+        let list:[Any] = ["a", "b", "c", 4, "d"]
+        for i in list {
+            if let str = i as? String {
+                print("===== \(str) =====")
+            }
+        }
+        // 带条件的循环遍历 等价于上面的 for in
+        for case let str as String in list {
+            print("==== \(str) ====")
+        }
+        
+    /******************************************************/
+        let array1 = [1,2,3,4]
+        let array2 = [2,3,4]
+        //同时遍历两个数组
+        for (item1, item2) in zip(array1, array2) {
+            print(item1, item2)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

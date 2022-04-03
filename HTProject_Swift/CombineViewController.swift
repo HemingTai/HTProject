@@ -30,7 +30,7 @@ class CombineViewController: UIViewController {
             .store(in: &dispose)
         
         list.publisher
-            .removeDuplicates()
+            .removeDuplicates() //移除重复值
             .sink(receiveCompletion: { _ in
                 print("completion!!!!")
             }, receiveValue: { print("**** \($0)") })
@@ -43,6 +43,6 @@ class CombineViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         textField.resignFirstResponder()
-        print(student.score)
+        print(student.name+"'s score is \(student.score)")
     }
 }
