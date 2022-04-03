@@ -145,3 +145,95 @@ func lengthOfLongestSubstring(_ s: String) -> Int {
 }
 print("lengthOfLongestSubstring: \(lengthOfLongestSubstring("abshdfdf"))")
 
+
+typealias Tree = [String: Any]
+typealias ListTree = [Tree]
+
+var outputTree: Tree = [:]
+let testTree5: Tree = [
+    "A": "a1",
+    "B": "b1",
+    "C": "c1",
+    "D": [
+            [
+                "A": "a2",
+                "B": "b2",
+                "C": "c2",
+                "D": [
+                        [
+                            "A": "a3",
+                            "B": "b3",
+                            "C": "c3",
+                            "D": [
+                                    [
+                                        "A": "a4",
+                                        "B": "b4",
+                                        "C": "c4",
+                                        "D": [
+                                                [
+                                                    "A": "a5",
+                                                    "B": "b5",
+                                                    "C": "c5",
+                                                    "D": []
+                                                ]
+                                        ]
+                                    ]
+                            ]
+                        ]
+                ]
+            ]
+    ]
+]
+
+let testTree3: Tree = [
+    "A": "a1",
+    "B": "b1",
+    "C": "c1",
+    "D": [
+            [
+                "A": "a2",
+                "B": "b2",
+                "C": "c2",
+                "D": [
+                        [
+                            "A": "a3",
+                            "B": "b3",
+                            "C": "c3",
+                            "D": [
+                                    [
+                                        "A": "a4",
+                                        "B": "b4",
+                                        "C": "c4",
+                                        "D": []
+                                    ]
+                            ]
+                        ]
+                ]
+            ]
+    ]
+]
+
+func iteratorTree(inputTree: Tree) -> Tree {
+    var iteratorTime = 0
+    outputTree = iteratorTree(inputTree: inputTree, iteratorTime: &iteratorTime)
+    return outputTree
+}
+
+func iteratorTree(inputTree: Tree, iteratorTime: inout Int) -> Tree {
+    var tempTree: Tree = [:]
+    iteratorTime += 1
+    inputTree.forEach { k, v in
+        if v is ListTree {
+            if iteratorTime < 4 {
+                tempTree[k] = iteratorTree(inputTree: (v as! ListTree)[0], iteratorTime: &iteratorTime)
+            } else {
+                tempTree[k] = []
+            }
+        } else {
+            tempTree[k] = v
+        }
+    }
+    return tempTree
+}
+
+print(iteratorTree(inputTree: testTree3))
