@@ -223,9 +223,9 @@ func iteratorTree(inputTree: Tree, iteratorTime: inout Int) -> Tree {
     var tempTree: Tree = [:]
     iteratorTime += 1
     inputTree.forEach { k, v in
-        if v is ListTree {
+        if k == "D" {
             if iteratorTime < 4 {
-                tempTree[k] = iteratorTree(inputTree: (v as! ListTree)[0], iteratorTime: &iteratorTime)
+                tempTree[k] = iteratorTree(inputTree: (v as! [Tree]).first!, iteratorTime: &iteratorTime)
             } else {
                 tempTree[k] = []
             }
