@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EntityListView: View {
     var body: some View {
-        Group {
+        VStack {
             EntityListItemView()
             EntityListItemView()
             EntityListItemView()

@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @State private var fruits = ["Apple", "Banana", "Papaya", "Mango"]
     
     var body: some View {

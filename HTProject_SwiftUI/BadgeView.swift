@@ -9,15 +9,17 @@
 import SwiftUI
 
 struct BadgeView: View {
-    @State var text = "Service Request"
-    @State var badgeColor = ""
+    
+    @State var text = "IT Service Request"
+    @State var badgeColor = Color(red: 35/255.0, green: 28/255.0, blue: 165/255.0)
     
     var body: some View {
-        Color(.blue)
-        Text(text)
-            .padding(EdgeInsets(top: -28, leading: 14, bottom: 0, trailing: 14))
-            .foregroundColor(.white)
-            .font(.system(.headline))
+        ZStack {
+            badgeColor
+            Text(text)
+                .foregroundColor(.white)
+                .font(.system(size: 16, weight: .medium))
+        }
     }
 }
 

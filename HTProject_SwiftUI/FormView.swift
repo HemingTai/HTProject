@@ -15,49 +15,29 @@ struct FormView: View {
     @State private var password = ""
     @State private var age = 0
     @State private var male = true
-    @State private var info = "This is some editable text..."
+    @State private var info = "Here is some editable text..."
+    @State private var progress = 0.5
     
     var body: some View {
         NavigationView {
             if #available(iOS 14.0, *) {
                 Form { //不使用group，Form最多只能显示10个子元素
                     //            Text("hello, world")
-                    //            Text("hello, world")
-                    //            Text("hello, world")
-                    //            Text("hello, world")
-                    //            Text("hello, world")
-                    //            Text("hello, world")
-                    //            Text("hello, world")
-                    //            Text("hello, world")
-                    //            Text("hello, world")
+                    //                     ...
                     //            Text("hello, world")
                     
                     //使用group，每个group最多能显示10个子元素
                     //注意，group并不会渲染，只会让Form突破10个子元素的限制
                     //            Group {
                     //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
+                    //                      ...
                     //                Text("hello, world")
                     //            }
                     
                     //使用Section，每个Section最多能显示10个子元素
                     //            Section {
                     //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
-                    //                Text("hello, world")
+                    //                      ...
                     //                Text("hello, world")
                     //            }
                     
@@ -81,14 +61,24 @@ struct FormView: View {
                         Button("Login") {
                             print("Log in successfully")
                         }
+                        Label("Test", systemImage: "iphone").foregroundColor(.black)
+//                        Link("Link", destination: URL(string: "https://www.baidu.com")!)
+                        ProgressView(value: progress)
                     }
                     
                     Section {
                         Text("User name is: \(userName)")
                         Text("Password is: \(password)")
+                        Menu {
+                            Text("A")
+                            Text("B")
+                            Text("C")
+                        } label: {
+                            Label("ABC", systemImage: "book")
+                        }
                     }
-                    .navigationTitle("Form")
                 }
+                .navigationTitle("Form")
             }
         }
     }
