@@ -33,17 +33,8 @@ extension Array {
         return dict
     }
     
-    func toString(seprator: String = ",", elementToStringFunction fn: (Element) -> String) -> String {
-        map(fn).joined(separator: seprator)
-    }
-    
-    func subArray(start: Int = 0, length: Int? = nil) -> [Element] {
-        let length = length ?? count - 1
-        if start >= count || length <= 0 {
-            return []
-        }
-        let end = start + length
-        return subArray(start: start, end: end)
+    func toString(separator: String = ",", elementToStringFunction closure: (Element) -> String) -> String {
+        map(closure).joined(separator: separator)
     }
     
     func subArray(start: Int = 0, end: Int? = nil) -> [Element] {
@@ -55,6 +46,15 @@ extension Array {
             return []
         }
         return Array(self[start...end])
+    }
+    
+    func subArray(start: Int = 0, length: Int? = nil) -> [Element] {
+        let length = length ?? count - 1
+        if start >= count || length <= 0 {
+            return []
+        }
+        let end = start + length
+        return subArray(start: start, end: end)
     }
     
     func distinct<Key: Hashable>(keyFunc: (Element) -> Key) -> [Element] {

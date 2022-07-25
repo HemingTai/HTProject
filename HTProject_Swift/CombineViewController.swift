@@ -43,6 +43,6 @@ class CombineViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         textField.resignFirstResponder()
-        print(student.name+"'s score is \(student.score)")
+        print((student.name ?? "") + "'s score is \(student.score)")
     }
 }

@@ -9,22 +9,18 @@
 import UIKit
 
 class DemoViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate {
-    let width = UIScreen.main.bounds.size.width
-    let height = UIScreen.main.bounds.size.height
-    var dataArray = ["无限轮播","地图标注","图片选择器","获取系统权限","跑马灯","缩放动画","弹性动画"]
-    let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height-64))
+    var dataArray = ["无限轮播","地图标注","图片选择器","获取系统权限","跑马灯","缩放动画","弹性动画", "动画进阶", "二维码", "搜索"]
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
-        self.title = "SwiftDemos"
+        view.backgroundColor = UIColor.white
+        navigationItem.title = "Swift Demos"
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = UIColor.white
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.tableFooterView = UIView(frame:CGRect.zero)
-        self.view.addSubview(tableView)
         
         let longPress = UILongPressGestureRecognizer(target: self, action:#selector(longPressAction(longPressGesture:)))
         longPress.delegate = self
@@ -36,14 +32,20 @@ class DemoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.didReceiveMemoryWarning()
     }
     
+    @objc func longPressAction(longPressGesture: UILongPressGestureRecognizer) {
+        if longPressGesture.state == .ended {
+            tableView.setEditing(!tableView.isEditing, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count
+        dataArray.count
     }
     
     func tableView(_ cellForRowAttableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         if indexPath.row == 0 {
-            let bannerView = TopBannerView(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: 253))
+            let bannerView = TopBannerView(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 253))
             //要先设置时间间隔才能自动滚动
             bannerView.autoScrollTimeInterval = 5
             bannerView.enableAutoScroll = true
@@ -56,40 +58,48 @@ class DemoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 253
-        }
-        return 60
+        indexPath.row == 0 ? 253 : 60
     }
     
     func tableView(_ didSelectRowAttableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 0: break
-        case 1:
-            let aMapVc = AnnotationViewController()
-            self.navigationController?.pushViewController(aMapVc, animated: true)
-        case 2:
-            let cImgVc = ChooseImageViewController()
-            self.navigationController?.pushViewController(cImgVc, animated: true)
-        case 3:
-            let saVc = SetAuthorizationViewController()
-            self.navigationController?.pushViewController(saVc, animated: true)
-        case 4:
-            let hrlVc = HorseRaceLampViewController()
-            self.navigationController?.pushViewController(hrlVc, animated: true)
-        case 5:
-            let scVc = ScaleViewController()
-            self.navigationController?.pushViewController(scVc, animated: true)
-        case 6:
-            let spVc = SpringViewController()
-            self.navigationController?.pushViewController(spVc, animated: true)
-        default:
-            break
+            case 1:
+                let aMapVc = AnnotationViewController()
+                navigationController?.pushViewController(aMapVc, animated: true)
+            case 2:
+                let cImgVc = ChooseImageViewController()
+                navigationController?.pushViewController(cImgVc, animated: true)
+            case 3:
+                let saVc = SetAuthorizationViewController()
+                navigationController?.pushViewController(saVc, animated: true)
+            case 4:
+                let hrlVc = HorseRaceLampViewController()
+                navigationController?.pushViewController(hrlVc, animated: true)
+            case 5:
+                let scVc = ScaleViewController()
+                navigationController?.pushViewController(scVc, animated: true)
+            case 6:
+                let spVc = SpringViewController()
+                navigationController?.pushViewController(spVc, animated: true)
+            case 7:
+                let aVc = AnimationViewController()
+                navigationController?.pushViewController(aVc, animated: true)
+            case 8:
+                let qVc = QRCodeViewController()
+                navigationController?.pushViewController(qVc, animated: true)
+            case 9:
+                pushViewController(QRCodeViewController.self)
+            default:
+                break
         }
     }
     
+    private func pushViewController<T>(_ type: T.Type) where T: UIViewController {
+        navigationController?.pushViewController(type.self.init(), animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        true
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -121,18 +131,7 @@ class DemoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    @objc func longPressAction(longPressGesture:UILongPressGestureRecognizer) {
-        if longPressGesture.state == UIGestureRecognizer.State.ended {
-            if tableView.isEditing == false {
-                tableView.setEditing(true, animated: true)
-            }
-            else {
-                tableView.setEditing(false, animated: true)
-            }
-        }
+        true
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {

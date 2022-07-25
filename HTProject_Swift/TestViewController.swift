@@ -8,14 +8,19 @@
 
 import UIKit
 
-class Student {
+class Student: ScopeFunction {
     
-    let name: String
+    var name: String?
     var score = 0
+    var age: Int?
     
     init(name: String, score: Int = 0) {
         self.name = name
         self.score = score
+    }
+    
+    init?(age: Int? = nil) {
+        self.age = age
     }
 }
 
@@ -23,9 +28,23 @@ class TestViewController: UIViewController {
 
     private let intArray = [1,2,3,4,5,6,7,8,9,10]
     private var intArray2 = [1,2,3,4,5,4,3,2,2,0]
+    private var s3 = Student(age: 3)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let s = Student(name: "Test").also { $0.score = 1 }
+        print(s.score)
+        
+        Student(age: 1).let {
+            print($0.score)
+        }
+        
+        s3.also {
+            $0.name = "S3"
+            $0.score = 3
+            return $0
+        }?.name.let { print($0) }
         
         print(intArray.toDictionary { String($0) })
         
@@ -79,6 +98,6 @@ class TestViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touch")
+        
     }
 }

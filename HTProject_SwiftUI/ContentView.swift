@@ -26,7 +26,7 @@ struct ContentView: View {
 //                .toolbar { EditButton() }
 //            }
 //        }
-        FormView()
+//        FormView()
 //        VStack {
 //            Mapview()
 //                .frame(height: 300)
@@ -50,7 +50,8 @@ struct ContentView: View {
 //                .padding()
 //                .offset(x: 0, y: -150)
 //        }
-            .edgesIgnoringSafeArea(.top)
+        TabsView(viewModel: TabsViewModel())
+//            .edgesIgnoringSafeArea(.top)
     }
     
     func deleteFruit(at: IndexSet) {
