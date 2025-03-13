@@ -78,7 +78,7 @@ private struct WrapperPagerTabStripView<Content>: View where Content: View {
 
     public var body: some View {
         GeometryReader { gproxy in
-            LazyHStack(spacing: 0) {
+            HStack(spacing: 0) {
                 content()
                     .frame(width: gproxy.size.width)
             }

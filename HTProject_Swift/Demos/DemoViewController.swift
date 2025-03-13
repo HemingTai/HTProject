@@ -8,8 +8,12 @@
 
 import UIKit
 
+class TestTableViewCell : UITableViewCell {
+    
+}
+
 class DemoViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate {
-    var dataArray = ["无限轮播","地图标注","图片选择器","获取系统权限","跑马灯","缩放动画","弹性动画", "动画进阶", "二维码", "搜索"]
+    var dataArray = ["无限轮播","地图标注","图片选择器","获取系统权限","跑马灯","缩放动画","弹性动画", "动画进阶", "二维码", "搜索", "CollectionView"]
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,6 +25,7 @@ class DemoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.tableFooterView = UIView(frame:CGRect.zero)
+        tableView.tableHeaderView = UIView(frame: .zero)
         
         let longPress = UILongPressGestureRecognizer(target: self, action:#selector(longPressAction(longPressGesture:)))
         longPress.delegate = self
@@ -43,11 +48,11 @@ class DemoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ cellForRowAttableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         if indexPath.row == 0 {
             let bannerView = TopBannerView(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 253))
             //要先设置时间间隔才能自动滚动
-            bannerView.autoScrollTimeInterval = 5
+            bannerView.autoScrollTimeInterval = 3
             bannerView.enableAutoScroll = true
             cell.contentView.addSubview(bannerView)
         }
@@ -89,6 +94,8 @@ class DemoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 navigationController?.pushViewController(qVc, animated: true)
             case 9:
                 pushViewController(QRCodeViewController.self)
+            case 10:
+                pushViewController(CollectionViewController.self)
             default:
                 break
         }

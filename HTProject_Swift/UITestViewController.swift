@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class UITestViewController: UIViewController {
 
@@ -40,6 +41,15 @@ class UITestViewController: UIViewController {
         print("deinit")
     }
     
+    @IBSegueAction func embedTestView(_ coder: NSCoder, sender: Any?) -> UIViewController? {
+        let viewModel = TestViewModel()
+        let testView = TestView(viewModel: viewModel, age: 0)
+        return TestHostingController(coder: coder, rootView: testView).also {
+            $0.setViewModel(viewModel)
+        }
+    }
+    
+    
     //监听系统模式的变化并作出响应，需要在监听的viewController中重写下列函数，注意:参数为变化前的traitCollection
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
@@ -69,6 +79,6 @@ class UITestViewController: UIViewController {
         if #available(iOS 13.0, *) {
             vc.view.backgroundColor = .systemBackground
         }
-        self.present(vc, animated: true, completion: nil)
+//        self.present(vc, animated: true, completion: nil)
     }
 }

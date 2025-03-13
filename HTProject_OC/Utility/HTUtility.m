@@ -33,7 +33,7 @@
     NSArray *cacheArray = [[NSFileManager defaultManager] contentsOfDirectoryAtURL:cacheURL includingPropertiesForKeys:nil options:0 error:nil];
     for (NSURL *cache in cacheArray) {
         NSString *fileName = cache.lastPathComponent;
-        if ([fileName hasPrefix:@".txt"]) {
+        if ([fileName hasSuffix: @".txt"]) {
             continue;
         }
         else {

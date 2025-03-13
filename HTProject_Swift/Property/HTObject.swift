@@ -16,7 +16,7 @@ class HTObject: NSObject {
     //fileprivate属性关键字是指在当前file中，任何类都可以访问（包括子类）
     fileprivate var type = "human"
     //private属性关键字是指私有变量，任何类都不可以访问（包括子类）
-    private var age  = 18
+    private var age = 18
     
     //designated初始化方法，如果不是private修饰，是可以被子类重写的
 //    init(name: String, age: Int) {

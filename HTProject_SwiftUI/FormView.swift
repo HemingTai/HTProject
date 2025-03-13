@@ -82,11 +82,11 @@ struct FormView: View {
             }
         }
     }
-    
-    struct FormView_Previews: PreviewProvider {
-        static var previews: some View {
-            FormView()
-                .environment(\.locale, .init(identifier: "en"))
-        }
+}
+
+struct FormView_Previews: PreviewProvider {
+    static var previews: some View {
+        FormView()
+            .environment(\.locale, .init(identifier: "en"))
     }
 }

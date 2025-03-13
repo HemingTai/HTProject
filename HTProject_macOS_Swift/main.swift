@@ -237,3 +237,8 @@ func iteratorTree(inputTree: Tree, iteratorTime: inout Int) -> Tree {
 }
 
 print(iteratorTree(inputTree: testTree3))
+
+//DailyExercises(type: .plus).generate()
+//DailyExercises(type: .minus).generate()
+//DailyExercises(type: .multiple).generate()
+//DailyExercises(min: 2, type: .divide).generate()

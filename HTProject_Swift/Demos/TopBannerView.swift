@@ -70,6 +70,7 @@ class TopBannerView: UIView,UIScrollViewDelegate {
         scrollView = UIScrollView(frame: frame)
         scrollView?.delegate = self
         scrollView?.isPagingEnabled = true
+        scrollView?.scrollsToTop = true
         scrollView?.showsHorizontalScrollIndicator = false
         scrollView?.contentSize = CGSize(width: 3*imgWidth!, height: imgHeight!)
         scrollView?.contentOffset = CGPoint(x: imgWidth!, y: 0)
