@@ -9,6 +9,6 @@
 import Foundation
 
 class TestViewModel: BaseViewModel {
-    lazy var age = LiveData(value: 1)
-    lazy var name = liveStateOf("--")
+    lazy var age = LiveData(value: 0)
+    lazy var name = liveStateOf("")
 }

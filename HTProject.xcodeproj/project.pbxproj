@@ -159,6 +159,7 @@
 		DACA0D302D82B16A002F4932 /* Combine+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA0D2F2D82B16A002F4932 /* Combine+Extension.swift */; };
 		DACA0D332D82B1B5002F4932 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA0D322D82B1B5002F4932 /* TestViewModel.swift */; };
 		DACA0D342D82B1B5002F4932 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA0D312D82B1B5002F4932 /* TestView.swift */; };
+		DACA0D362D895006002F4932 /* Async+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA0D352D894FEA002F4932 /* Async+Extension.swift */; };
 		DAE7F46F2B4FE9EC00264547 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7F46E2B4FE9EC00264547 /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -422,6 +423,7 @@
 		DACA0D2F2D82B16A002F4932 /* Combine+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Extension.swift"; sourceTree = "<group>"; };
 		DACA0D312D82B1B5002F4932 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DACA0D322D82B1B5002F4932 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		DACA0D352D894FEA002F4932 /* Async+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Async+Extension.swift"; sourceTree = "<group>"; };
 		DAE7F46E2B4FE9EC00264547 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -487,6 +489,7 @@
 		6F0327A325BEB37F005D3727 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DACA0D352D894FEA002F4932 /* Async+Extension.swift */,
 				6F0327A425BEB3DA005D3727 /* Collection+Extensions.swift */,
 				6F0327AB25BEB3F5005D3727 /* Operator+Extensions.swift */,
 				DABC4F012889334400844996 /* ScopeFunction+Extensions.swift */,
@@ -621,8 +624,8 @@
 				9EF5BA97238BC1EC00145DB8 /* UITestViewController.swift */,
 				DACA0D312D82B1B5002F4932 /* TestView.swift */,
 				DACA0D322D82B1B5002F4932 /* TestViewModel.swift */,
-				DACA0D2B2D82B14A002F4932 /* BaseHostingController.swift */,
 				DACA0D2C2D82B14A002F4932 /* TestHostingController.swift */,
+				DACA0D2B2D82B14A002F4932 /* BaseHostingController.swift */,
 				9EF5B9B5238BBEF500145DB8 /* AppDelegate.swift */,
 				9EF5B9B7238BBEF500145DB8 /* SceneDelegate.swift */,
 				9EF5B9BE238BBEF600145DB8 /* Assets.xcassets */,
@@ -1502,6 +1505,7 @@
 				9EF5BB28238D1D8500145DB8 /* AnnotationViewController.swift in Sources */,
 				9EF5B9B8238BBEF500145DB8 /* SceneDelegate.swift in Sources */,
 				6F7CC55B25B1907600056125 /* CombineViewController.swift in Sources */,
+				DACA0D362D895006002F4932 /* Async+Extension.swift in Sources */,
 				9EF5BAA8238BC1EC00145DB8 /* AnimationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

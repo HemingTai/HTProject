@@ -42,7 +42,9 @@ class LiveState<T> {
         self.holder = owner
         self.value = value
         cancellable = $value.sink { [weak self] _ in
-            self?.holder?.objectWillChange.send()
+            DispatchQueue.main.async {
+                self?.holder?.objectWillChange.send()
+            }
         }
     }
     
@@ -72,11 +74,13 @@ class LiveData<T> {
     }
 }
 
-class BaseViewModel: ObservableObject, LiveStateHolder, ObserverHolder {
+class BaseViewModel: ObservableObject, LiveStateHolder, ObserverHolder, TaskScope {
+    let jobs = Jobs()
     lazy var cancellableSet = Set<AnyCancellable>()
     
     deinit {
         cancellableSet.forEach { $0.cancel() }
+        jobs.cancelAll()
     }
 }
 
@@ -88,6 +92,8 @@ protocol ViewModelHolder: ObserverHolder {
 @propertyWrapper
 class InjectViewModel<VM: BaseViewModel> {
     private var viewModel: VM?
+    
+    @available(*, unavailable, message: "This property wrapper can only be applied to classes")
     var wrappedValue: VM {
         get {
             fatalError("never reach here")
@@ -98,6 +104,9 @@ class InjectViewModel<VM: BaseViewModel> {
         }
     }
     
+    //_enclosingInstance instance: 封闭实例，即持有该包装器的对象
+    //ReferenceWritableKeyPath<VC, VM>: 指向被包装属性的可写键路径
+    //ReferenceWritableKeyPath<VC, P>: 指向包装器自身的可写键路径
     static subscript<VC: ViewModelHolder, P: InjectViewModel<VM>>(_enclosingInstance instance: VC, wrapped wrappedKeyPath: ReferenceWritableKeyPath<VC, VM>, storage storageKeyPath: ReferenceWritableKeyPath<VC, P>) -> VM {
         get {
             let wrapper = instance[keyPath: storageKeyPath]

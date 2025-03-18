@@ -148,6 +148,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="WU7-2N-Gw0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="itF-FT-aWb"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUt-ip-wob">
@@ -176,12 +177,15 @@
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="A8N-kw-7rm"/>
                                     <constraint firstAttribute="height" constant="30" id="Qzo-kX-ryp"/>
                                 </constraints>
                             </stackView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2kN-3h-HBy">
-                                <rect key="frame" x="0.0" y="298" width="430" height="325"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kN-3h-HBy">
+                                <rect key="frame" x="0.0" y="223" width="430" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="t2B-ad-psT"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="ygq-L5-Z3p" kind="embed" destinationCreationSelector="embedTestView:sender:" id="VLZ-mz-BS7"/>
                                 </connections>
@@ -192,11 +196,20 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="plI-ep-KcF" firstAttribute="trailing" secondItem="hUt-ip-wob" secondAttribute="trailing" id="7pU-2b-5IH"/>
+                            <constraint firstItem="aT5-DG-Pm9" firstAttribute="trailing" secondItem="plI-ep-KcF" secondAttribute="trailing" id="A3B-ss-Dqu"/>
+                            <constraint firstItem="hUt-ip-wob" firstAttribute="top" secondItem="aT5-DG-Pm9" secondAttribute="bottom" id="D0N-et-ClX"/>
+                            <constraint firstItem="aT5-DG-Pm9" firstAttribute="leading" secondItem="plI-ep-KcF" secondAttribute="leading" id="DTU-g5-H5k"/>
+                            <constraint firstItem="aT5-DG-Pm9" firstAttribute="top" secondItem="plI-ep-KcF" secondAttribute="top" id="EMF-ge-vlG"/>
                             <constraint firstItem="hUt-ip-wob" firstAttribute="top" secondItem="aT5-DG-Pm9" secondAttribute="bottom" id="HIg-B8-fRf"/>
+                            <constraint firstItem="hUt-ip-wob" firstAttribute="leading" secondItem="plI-ep-KcF" secondAttribute="leading" id="JUZ-jd-Tba"/>
                             <constraint firstItem="aT5-DG-Pm9" firstAttribute="top" secondItem="plI-ep-KcF" secondAttribute="top" id="Vvh-nn-5Aw"/>
                             <constraint firstItem="plI-ep-KcF" firstAttribute="trailing" secondItem="aT5-DG-Pm9" secondAttribute="trailing" id="XdM-uJ-dDn"/>
+                            <constraint firstItem="2kN-3h-HBy" firstAttribute="top" secondItem="hUt-ip-wob" secondAttribute="bottom" id="dQX-OR-5O7"/>
+                            <constraint firstItem="2kN-3h-HBy" firstAttribute="trailing" secondItem="plI-ep-KcF" secondAttribute="trailing" id="hry-Zk-cUI"/>
                             <constraint firstItem="hUt-ip-wob" firstAttribute="leading" secondItem="plI-ep-KcF" secondAttribute="leading" id="pf4-Wh-JtM"/>
+                            <constraint firstItem="2kN-3h-HBy" firstAttribute="leading" secondItem="plI-ep-KcF" secondAttribute="leading" id="qSN-6l-tIt"/>
                             <constraint firstItem="aT5-DG-Pm9" firstAttribute="leading" secondItem="plI-ep-KcF" secondAttribute="leading" id="rYO-ta-P6j"/>
+                            <constraint firstItem="hUt-ip-wob" firstAttribute="trailing" secondItem="plI-ep-KcF" secondAttribute="trailing" id="waA-b2-88m"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Bt3-Ql-U5Y" appends="YES" id="mj1-RM-pcS"/>

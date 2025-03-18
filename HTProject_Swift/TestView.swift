@@ -10,12 +10,12 @@ import SwiftUI
 
 struct TestView: View {
     @ObservedObject var viewModel: TestViewModel
-    @State var age: Int
+    @State var age = 0
     
     var body: some View {
-        VStack {
-            TextField("", text: viewModel.name.binding)
-                    .keyboardType(.default)
+        VStack(alignment: .leading, spacing: 8) {
+            TextField("input name here...", text: viewModel.name.binding)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             Text("Name: \(viewModel.name.value)")
             Text("Age: \(age)")
             Button {
@@ -25,5 +25,7 @@ struct TestView: View {
                 Text("increase")
             }
         }
+        .padding(.top, 16)
+        .padding(.horizontal, 16)
     }
 }
