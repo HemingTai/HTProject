@@ -160,6 +160,7 @@
 		DACA0D332D82B1B5002F4932 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA0D322D82B1B5002F4932 /* TestViewModel.swift */; };
 		DACA0D342D82B1B5002F4932 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA0D312D82B1B5002F4932 /* TestView.swift */; };
 		DACA0D362D895006002F4932 /* Async+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA0D352D894FEA002F4932 /* Async+Extension.swift */; };
+		DACA0D382D8C07C7002F4932 /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA0D372D8C07C7002F4932 /* Interview.swift */; };
 		DAE7F46F2B4FE9EC00264547 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7F46E2B4FE9EC00264547 /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -424,6 +425,7 @@
 		DACA0D312D82B1B5002F4932 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		DACA0D322D82B1B5002F4932 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		DACA0D352D894FEA002F4932 /* Async+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Async+Extension.swift"; sourceTree = "<group>"; };
+		DACA0D372D8C07C7002F4932 /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
 		DAE7F46E2B4FE9EC00264547 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -517,6 +519,7 @@
 		6F73B428266A709C002B24DE /* HTProject_macOS_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				DACA0D372D8C07C7002F4932 /* Interview.swift */,
 				6F73B429266A709C002B24DE /* main.swift */,
 				DA86EFFC2BDA45DD00709E0E /* Exercises.swift */,
 			);
@@ -1483,6 +1486,7 @@
 				9EF5BAA6238BC1EC00145DB8 /* SocketViewController.swift in Sources */,
 				10236CD724653C5F00470B84 /* HTObject.swift in Sources */,
 				DACA0D2D2D82B14A002F4932 /* TestHostingController.swift in Sources */,
+				DACA0D382D8C07C7002F4932 /* Interview.swift in Sources */,
 				DACA0D2E2D82B14A002F4932 /* BaseHostingController.swift in Sources */,
 				9EF5BB25238D1D8500145DB8 /* HorseRaceLampViewController.swift in Sources */,
 				9EF5BB2A238D1D8500145DB8 /* ChooseImageViewController.swift in Sources */,

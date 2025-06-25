@@ -34,12 +34,12 @@
  @return 处理后的请求
  */
 + (NSURLRequest *)canonicalRequestForRequest:(NSURLRequest *)request {
-    NSMutableURLRequest *mutableReqeust = [request mutableCopy];
+    NSMutableURLRequest *mutableRequest = [request mutableCopy];
     //篡改原始请求
-    mutableReqeust.URL = [NSURL URLWithString:@"https://www.baidu.com"];
-    mutableReqeust.HTTPMethod = @"GET";
-    [mutableReqeust setValue:@"iOS" forHTTPHeaderField:@"platform"];
-    return mutableReqeust.copy;
+    mutableRequest.URL = [NSURL URLWithString:@"https://www.baidu.com"];
+    mutableRequest.HTTPMethod = @"GET";
+    [mutableRequest setValue:@"iOS" forHTTPHeaderField:@"platform"];
+    return mutableRequest.copy;
 }
 
 /**
@@ -58,9 +58,9 @@
     [NSURLProtocol setProperty:@YES forKey:self.request.URL.absoluteString inRequest:self.request.mutableCopy];
     [[[NSURLSession sharedSession] dataTaskWithRequest:self.request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         [self.client URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageAllowed];
-        NSError *nerror;
+        NSError *nError;
         //篡改返回数据
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:@{@"key":@"测试"} options:NSJSONWritingPrettyPrinted error:&nerror];
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:@{@"key":@"测试"} options:NSJSONWritingPrettyPrinted error:&nError];
         [self.client URLProtocol:self didLoadData:jsonData];
         if (error) {
             [self.client URLProtocol:self didFailWithError:error];

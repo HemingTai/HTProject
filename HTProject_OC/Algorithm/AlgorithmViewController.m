@@ -23,7 +23,7 @@
 //    [self myTestFunction1];
 //    [self myTestFunction2];
 //    [self myTestFunction3];
-    [self quickSortArrayWithArray:_array leftIndex:0 rightIndex:_array.count-1];
+//    [self quickSortArrayWithArray:_array leftIndex:0 rightIndex:_array.count-1];
 }
 
 /******************** 时空复杂度 ********************

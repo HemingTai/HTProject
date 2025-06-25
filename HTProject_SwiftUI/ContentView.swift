@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @State private var selected = "1"
     @State private var fruits = ["Apple", "Banana", "Papaya", "Mango"]
     
     var body: some View {
@@ -50,8 +50,9 @@ struct ContentView: View {
 //                .padding()
 //                .offset(x: 0, y: -150)
 //        }
-        TabsView(viewModel: TabsViewModel())
-//            .edgesIgnoringSafeArea(.top)
+//        TabsView(viewModel: TabsViewModel())
+        TagScrollView(tags: (1...20).map { "Item \($0)" }, selectedTag: $selected)
+//        ReorderableListView()
     }
     
     func deleteFruit(at: IndexSet) {
@@ -60,6 +61,48 @@ struct ContentView: View {
     
     func moveFruit(from: IndexSet, to: Int) {
         fruits.move(fromOffsets: from, toOffset: to)
+    }
+}
+
+struct TagScrollView: View {
+    let tags: [String]
+    @Binding var selectedTag: String
+    
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 10) {
+                ForEach(tags, id: \.self) { tag in
+                    Text(tag)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 8)
+                        .background(selectedTag == tag ? Color.blue : Color.gray)
+                        .foregroundColor(.white)
+                        .cornerRadius(20)
+                        .onTapGesture {
+                            selectedTag = tag
+                        }
+                }
+            }
+            .padding(.horizontal)
+        }
+    }
+}
+
+struct ReorderableListView: View {
+    @State private var items = (1...20).map { "Item \($0)" }
+    
+    var body: some View {
+        List {
+            ForEach(items, id: \.self) { item in
+                Text(item)
+            }
+            .onMove { indices, newOffset in
+                items.move(fromOffsets: indices, toOffset: newOffset)
+            }
+        }
+        .toolbar {
+            EditButton()
+        }
     }
 }
 

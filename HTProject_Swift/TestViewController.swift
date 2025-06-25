@@ -96,8 +96,4 @@ class TestViewController: UIViewController {
             print(item1, item2)
         }
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-    }
 }
